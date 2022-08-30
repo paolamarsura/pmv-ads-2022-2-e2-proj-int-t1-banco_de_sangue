@@ -1,23 +1,24 @@
-# TÍTULO DO PROJETO
+# BANCO DE SANGUE - APLICAÇÃO INTERATIVA
 
-`CURSO`
+ANÁLISE E DESENVOLVIMENTO DE SISTEMAS - PUC MINAS
 
-`DISCIPLINA`
-
-`SEMESTRE`
+Eixo 2 - Projeto: Desenvolvimento de uma Aplicação Interativa - Turma 01 - Grupo 01 - 2022/2
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Andre Felipe Gomes Pinto
+* Barbara Benedetti Cavalcante
+* Jair Junio Da Silva
+* Paola Marsura Verreschi de Oliveira
+* Paula Lavínia Alves Perret
+* Ríder Rocha Cantuária
+* Waldirene Noronha Rodrigues Braga
 
 ## Orientador
 
-* Nome completo do professor 1
+* Rosilane Ribeiro Da Mota
 
 ## Instruções de utilização
 
