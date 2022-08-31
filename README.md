@@ -11,10 +11,10 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Andre Felipe Gomes Pinto
 * Barbara Benedetti Cavalcante
 * Jair Junio Da Silva
+* Luiz Eduardo Tavares Costa
 * Paola Marsura Verreschi de Oliveira
 * Paula Lavínia Alves Perret
 * Ríder Rocha Cantuária
-* Waldirene Noronha Rodrigues Braga
 
 ## Orientador
 
