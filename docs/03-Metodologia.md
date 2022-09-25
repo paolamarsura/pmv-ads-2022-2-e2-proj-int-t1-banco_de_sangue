@@ -67,11 +67,15 @@ Portanto, a equipe está organizada da seguinte maneira:
 Para organização e distribuição das tarefas do projeto, a equipe está utilizando Trello estruturado com as seguintes listas:
 
 •	Documentação e links: esta lista armazena os documentos de direcionamento do projeto, bem como o cronograma de entrega a ser seguido; nela ficam também os links oficiais utilizados pela equipe e os materiais de apoio. Também é nela que ficam armazenado os arquivos que competem ao modelo de padronização do projeto. 
+
 •	Gerenciamento do projeto / (backlog): esta lista elenca as etapas necessárias para execução do projeto; cada card de etapa contém os requisitos de entrega, também serve para armazenamento de arquivos referente a cada etapa, ou seja, esta lista recebe as tarefas a serem trabalhadas, representando o Product Backlog.
+
 •	Desenvolvimento: esta lista é dinâmica e seu objetivo é apresentar a etapa em desenvolvimento conforme o cronograma (sprint atual), seus cards apresentam as tarefas a serem trabalhadas, assim esta lista representa o Sprint Backlog.
 
 •	Teste: Checagem de Qualidade, quando as tarefas são concluídas, elas são movidas para esta lista, os cartões chegam aqui após a revisão do código; as tarefas desta lista estão em fase de teste, é nesta fase que serão realizadas as correções apontadas pelo controle de qualidade. A revisão do design também acontece nesta fase.
-•	Ação necessária: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa. 
+
+•	Ação necessária: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa.
+
 •	Conclusão: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontas para serem entregues ao usuário. Não há mais edições ou revisões necessárias, elas estão agendadas e prontas para a ação.
 
 
