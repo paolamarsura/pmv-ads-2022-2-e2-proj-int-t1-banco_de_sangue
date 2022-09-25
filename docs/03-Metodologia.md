@@ -53,14 +53,17 @@ A equipe fará uso da metodologia ágil Scrum como base para definição de todo
 Portanto, a equipe está organizada da seguinte maneira:
 
 ● Scrum Master: Paola Marsura Verreschi de Oliveira
+
 ● Product Owner: Barbara Benedetti Cavalcante
+
 ● Equipe de Desenvolvimento:
-○ Jair Junio Da Silva
-○ Ríder Rocha Cantuária
-○ Paula Lavínia Alves Perret
+- Jair Junio Da Silva
+- Ríder Rocha Cantuária
+- Paula Lavínia Alves Perret
+
 ● Equipe de Design:
-○ Andre Felipe Gomes Pinto
-○ Luiz Eduardo Tavares Costa
+- Andre Felipe Gomes Pinto
+- Luiz Eduardo Tavares Costa
 
 ### Processo
 
