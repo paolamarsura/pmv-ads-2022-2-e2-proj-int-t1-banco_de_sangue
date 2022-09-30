@@ -17,7 +17,7 @@ Vietro, I. L. Fluxo de desenvolvimento com GitFlow. 2015. Disponível em: https:
 > - [Teste de usabilidade: tudo o que você precisa saber! | by Jon Vieira | Aela.io | Medium](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
 > - [Planejando testes de usabilidade: o que (e o que não) fazer | iMasters](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
 > - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
-> - [Multiplicidade e relacionamento] (http://spaceprogrammer.com/uml/compreendendo-multiplicidade-e-os-tipos-de-associacao/)
+> - [Multiplicidade e relacionamento](http://spaceprogrammer.com/uml/compreendendo-multiplicidade-e-os-tipos-de-associacao/)
 > - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
 > - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
 > - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
