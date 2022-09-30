@@ -46,5 +46,6 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 O diagrama apresentado abaixo contempla as principais ligações previstas entre casos de uso e atores, permitindo detalhar os Requisitos Funcionais definidos e elicitar as histórias de usuários.
 
-![Caso de uso - banco de sangue](https://user-images.githubusercontent.com/101051620/189016383-17be5293-c4d6-4c23-8670-65f774c16df8.jpg)
+![diagrama de caso de uso corrigido](https://user-images.githubusercontent.com/103156976/193267052-da4e12ca-91b3-4b25-b25a-7ce462b065bb.jpg)
+
 
