@@ -9,7 +9,7 @@
 
 Os artefatos do projeto serão desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
-![ Tabela de ambientes de trabalho e ferramentas de desenvolvimento.](https://user-images.githubusercontent.com/103156976/193286569-b1c186ea-76bc-409d-ae02-c8c7c7d31cd2.png)
+![image](https://user-images.githubusercontent.com/103156976/193322810-2792be2a-6968-4a55-ac55-a5ef07e36e63.png)
 
 ### Ferramentas
 
