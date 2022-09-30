@@ -23,7 +23,7 @@ Vietro, I. L. Fluxo de desenvolvimento com GitFlow. 2015. Disponível em: https:
 > - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
 > - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 > - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
-> - [11 Passos Essenciais para Implantar Scrum no seu projeto] (https://mindmaster.com.br/scrum-11-passos/)
+> - [11 Passos Essenciais para Implantar Scrum no seu projeto](https://mindmaster.com.br/scrum-11-passos/)
 > - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0/)
 > - [Project management, made simple](https://github.com/features/project-management/)
 > - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
