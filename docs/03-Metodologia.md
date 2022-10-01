@@ -82,6 +82,9 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 •	Conclusão: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontas para serem entregues ao usuário. Não há mais edições ou revisões necessárias, elas estão agendadas e prontas para a ação.
 
 
-O quadro kanban do grupo no Trello está disponível através do link [Quadro Trello](https://trello.com/b/KRFCKLn0/grupo-1-turma-1-eixo-2-ads-2022) e é apresentado, no estado atual, na Figura 2 abaixo. 
+O quadro kanban do grupo no Trello está disponível através do link [Quadro Trello](https://trello.com/b/KRFCKLn0/grupo-1-turma-1-eixo-2-ads-2022) e é apresentado, no estado atual, na figura  abaixo. 
+
+![image](https://user-images.githubusercontent.com/103156976/193410768-e3a39d30-62e3-49dc-972b-e024e8c77d02.png)
+
 
 
