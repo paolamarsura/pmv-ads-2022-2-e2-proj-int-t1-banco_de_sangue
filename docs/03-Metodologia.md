@@ -41,7 +41,7 @@ Para este versionamento e controle de código fonte, estabelecemos o seguinte fl
 
  Sendo que o [Github](https://github.com) foi utilizado para hospedagem do repositório.
  
- ![image](https://user-images.githubusercontent.com/103156976/192171014-20a5ba40-f3c9-4305-9ded-f6560303633b.png)
+ ![image](https://user-images.githubusercontent.com/103156976/193410509-dd1cfd80-c2e7-4f6e-b5fc-a30b33cf9d48.png)
 
 
 ## Gerenciamento de Projeto
