@@ -66,7 +66,6 @@ Vietro, I. L. Fluxo de desenvolvimento com GitFlow. 2015. Disponível em: https:
 > - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
 > - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
 > - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
 > - [10 dicas de design para slides](https://rockcontent.com/blog/design-para-slides/)
 > - [7 dicas de design para criar apresentações de PowerPoint incríveis e eficientes](https://www.shutterstock.com/pt/blog/7-dicas-de-design-para-criar-apresentacoes-de-powerpoint-incriveis-e-eficientes)
