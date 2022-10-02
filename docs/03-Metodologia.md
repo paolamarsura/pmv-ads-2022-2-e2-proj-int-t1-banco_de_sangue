@@ -17,7 +17,7 @@ As ferramentas empregadas no projeto são:
 
 - Editor de código: Visual Studio Comunity 2019
 - Ferramentas de comunicação: WhatsApp e Teams.
-- Ferramentas de desenho de tela: [Canva] (https://www.canva.com/)
+- Ferramentas de desenho de tela: [Canva] (https://www.canva.com/).
 
 O editor de código foi escolhido porque ele possui uma integração com o sistema de versão.
 As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas.
