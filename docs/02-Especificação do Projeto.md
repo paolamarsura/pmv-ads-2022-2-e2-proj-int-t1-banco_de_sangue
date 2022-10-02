@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foi consolidada por meio de uma discussão com os membros da equipe a partir da explanação de situações reais e elucidação de histórias. Os detalhes levantados nesse processo foram consolidados na forma de personas e histórias de usuários. 
+A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foram consolidados por meio de uma discussão entre os membros da equipe a partir da explanação de situações reais e elucidação de histórias. Os detalhes levantados nesse processo foram compilados na forma de personas e histórias de usuários. 
 
 ## Personas
 
