@@ -15,7 +15,8 @@
 
 Protótipos usado em design de interface para sugerir a estrutura de uma aplicação web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface. O wireframe desta aplicação interativa é apresentado abaixo:
 
-![Wireframe 1](https://user-images.githubusercontent.com/103156976/193286811-72d9f15f-dc5a-46ee-8bd0-750a220e17f3.jpeg)
+![wireframe](https://user-images.githubusercontent.com/103156976/193449844-ecbe40ad-d4fd-47a1-b9f4-e09ff422619a.jpeg)
+
 
 
 
