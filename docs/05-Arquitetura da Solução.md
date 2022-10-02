@@ -15,17 +15,16 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-Sugestão de ferramentas para geração deste artefato: LucidChart e Draw.io.
+![modelo er conceitual](https://user-images.githubusercontent.com/103156976/193477105-dc9164ab-c294-430b-8f59-a56b3d8c3541.jpeg)
 
-A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+O modelo ER foi desenvolvido utilizando a plataforma Lucidchart.
 
 ## Projeto da Base de Dados
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
  
-Para mais informações, consulte o microfundamento "Modelagem de Dados".
+![BDFISICO](https://user-images.githubusercontent.com/103156976/193477261-5e3243b5-6787-419d-b6f7-eb6b20c4b6ac.JPG)
+
 
 ## Tecnologias Utilizadas
 
