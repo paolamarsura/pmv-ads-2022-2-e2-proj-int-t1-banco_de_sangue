@@ -3,7 +3,7 @@
 
  O desenvolvimento deste projeto, originou-se da observação da escassez de sangue no Brasil trabalhando por sua vez a limitação que o brasileiro encontra no acesso aos canais tradicionais de informação sobre o tema.
  
- Serão feitas reuniões entre a equipe de forma on-line na ferramenta Teams, através de conversas pelo aplicativo WhatsApp e se necessário, durante este trabalho, será usada a metodologia Scrum de desenvolvimento ágil, dividindo esforço de entrega em sprints de 1 semana. 
+ Serão feitas reuniões entre a equipe de forma on-line na ferramenta Teams, através de conversas pelo aplicativo WhatsApp, durante este trabalho, será usada a metodologia Scrum de desenvolvimento ágil, dividindo esforço de entrega em sprints de 1 semana. 
 
 ## Relação de ambientes de trabalho
 
@@ -33,15 +33,17 @@ Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as ne
  
 Para este versionamento e controle de código fonte, estabelecemos o seguinte fluxo:
 
-1-	Clone do projeto (cada membro do grupo criou o clone do projeto em sua máquina). 
-2-	Criação da Branch (ramificação independente que permite alterar os arquivos sem interferir no original).
-3-	Commits (descrição objetiva de cada commit conforme funcionalidade)
-4-	Push (Após finalizada a funcionalidade enviamos a nossa branch com as alterações para o repositório remoto, permitindo que os membros do grupo possam ver e alterar se necessário).
-5-	Merge (Ato de mesclar as modificações das branchs com os arquivos originais do projeto da Branch principal, deixando disponível para os demais contribuidores).
+1. Clone do projeto (cada membro do grupo criou o clone do projeto em sua máquina). 
+2.	Criação da Branch (ramificação independente que permite alterar os arquivos sem interferir no original).
+3.	Commits (descrição objetiva de cada commit conforme funcionalidade)
+4.	Pull (Utilizado para buscar e trazer mudanças do repositório remoto para o repositório local, ou seja, unir os conteúdos dos arquivos alterados. Em alguns casos, pode ser necessária uma intervenção humana para realizar essa)
+5.	Push (Após finalizada a funcionalidade enviamos a nossa branch com as alterações para o repositório remoto, permitindo que os membros do grupo possam ver e alterar se necessário).
+6.	Merge (Ato de mesclar as modificações das branchs com os arquivos originais do projeto da Branch principal, deixando disponível para os demais contribuidores).
 
  Sendo que o [Github](https://github.com) foi utilizado para hospedagem do repositório.
  
- ![image](https://user-images.githubusercontent.com/103156976/193410509-dd1cfd80-c2e7-4f6e-b5fc-a30b33cf9d48.png)
+ 
+ ![image](https://user-images.githubusercontent.com/112259936/193463783-a6266a14-cce0-4e43-af2b-7657d93e4ed5.png)
 
 
 ## Gerenciamento de Projeto
