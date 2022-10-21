@@ -8,6 +8,8 @@ namespace BancoDeSangue.Repositorio
 {
     public interface IUsuarioRepositorio
     {
+
+        List<UsuarioModel> BuscarTodos();
         UsuarioModel Adicionar(UsuarioModel usuarioModel);
     }
 }

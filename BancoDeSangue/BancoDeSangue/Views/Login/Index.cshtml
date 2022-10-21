@@ -1,19 +1,25 @@
-﻿<div class="log-form">
+﻿@model UsuarioModel
+@{ 
+    ViewData["Title"] = "Login";
+ }
+
+
+<div class="log-form">
     <h2>Faça seu login</h2>
-    <form>
+    <form asp-controller="Login" asp-action="Login" method="post">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-         </div>
+            <input type="email" asp-for="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="exampleInputsenha1" class="form-label">Senha</label>
+            <input type="password" asp-for="senha" class="form-control" id="exampleInputsenha1">
         </div>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
         </div>
-        <button type="submit" class="btn btn-primary btn-block" asp-controller="Login" asp-action="Index">Acessar</button>
+        <button type="submit" class="btn btn-primary btn-block" >Acessar</button>
         <a class="btn btn-secondary btn-block" asp-controller="CadastroUsuario" asp-action="Criar" role="button">Cadastre-se</a>
     </form>
 </div>

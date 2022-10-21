@@ -15,12 +15,20 @@ namespace BancoDeSangue.Repositorio
         {
             _bancoContext = bancoContext;
         }
-        
+
+        public List<UsuarioModel> BuscarTodos()
+        {
+            return _bancoContext.Usuarios.ToList();
+        }   
+      
+
         public UsuarioModel Adicionar(UsuarioModel usuario)
         {
             _bancoContext.Usuarios.Add(usuario);
             _bancoContext.SaveChanges();
             return usuario; 
         }
+
+      
     }
 }

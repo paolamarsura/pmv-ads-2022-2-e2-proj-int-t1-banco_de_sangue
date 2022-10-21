@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\Projetos\\CSharp\\BancoDeSangue\\BancoDeSangue\\BancoDeSangue.csproj": {}
+    "C:\\dev\\Projetos\\CSharp\\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\\BancoDeSangue\\BancoDeSangue\\BancoDeSangue.csproj": {}
   },
   "projects": {
-    "C:\\dev\\Projetos\\CSharp\\BancoDeSangue\\BancoDeSangue\\BancoDeSangue.csproj": {
+    "C:\\dev\\Projetos\\CSharp\\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\\BancoDeSangue\\BancoDeSangue\\BancoDeSangue.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\Projetos\\CSharp\\BancoDeSangue\\BancoDeSangue\\BancoDeSangue.csproj",
+        "projectUniqueName": "C:\\dev\\Projetos\\CSharp\\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\\BancoDeSangue\\BancoDeSangue\\BancoDeSangue.csproj",
         "projectName": "BancoDeSangue",
-        "projectPath": "C:\\dev\\Projetos\\CSharp\\BancoDeSangue\\BancoDeSangue\\BancoDeSangue.csproj",
+        "projectPath": "C:\\dev\\Projetos\\CSharp\\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\\BancoDeSangue\\BancoDeSangue\\BancoDeSangue.csproj",
         "packagesPath": "C:\\Users\\paola\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\Projetos\\CSharp\\BancoDeSangue\\BancoDeSangue\\obj\\",
+        "outputPath": "C:\\dev\\Projetos\\CSharp\\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\\BancoDeSangue\\BancoDeSangue\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -69,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.30, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [

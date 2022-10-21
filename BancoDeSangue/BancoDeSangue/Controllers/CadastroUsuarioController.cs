@@ -19,7 +19,8 @@ namespace BancoDeSangue.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<UsuarioModel> usuario = _usuarioRepositorio.BuscarTodos();
+            return View(usuario);
         }
 
         public IActionResult Criar()
@@ -40,10 +41,13 @@ namespace BancoDeSangue.Controllers
         [HttpPost]
         public IActionResult Criar(UsuarioModel usuario)
         {
+            usuario.SetSenhaHash(usuario);
             _usuarioRepositorio.Adicionar(usuario);
             return RedirectToAction("Index", "Login");
 
             //Aqui ele redireciona para página index do Login
         }
+
+        //Camada de negocios
     }
 }
