@@ -3,14 +3,16 @@ using BancoDeSangue.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BancoDeSangue.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    partial class BancoContextModelSnapshot : ModelSnapshot
+    [Migration("20221024010045_CriandoTabelaInstituicoes")]
+    partial class CriandoTabelaInstituicoes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,10 +22,9 @@ namespace BancoDeSangue.Migrations
 
             modelBuilder.Entity("BancoDeSangue.Models.InstituicaoModel", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<string>("nome")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("cidade")
                         .HasColumnType("nvarchar(max)");
@@ -31,13 +32,10 @@ namespace BancoDeSangue.Migrations
                     b.Property<string>("endereco")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("nome")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("telefone")
                         .HasColumnType("int");
 
-                    b.HasKey("id");
+                    b.HasKey("nome");
 
                     b.ToTable("Instituicoes");
                 });

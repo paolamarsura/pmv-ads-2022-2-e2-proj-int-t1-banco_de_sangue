@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\IinstituicaoRepositorio.cs" />
     <Compile Remove="Controllers\LoginSController.cs" />
+    <Compile Remove="Models\Insituicao.cs" />
   </ItemGroup>
 
   <ItemGroup>
