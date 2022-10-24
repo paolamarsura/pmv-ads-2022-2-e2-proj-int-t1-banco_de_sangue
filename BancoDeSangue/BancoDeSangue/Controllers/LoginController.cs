@@ -21,8 +21,9 @@ namespace BancoDeSangue.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> login(UsuarioModel usuario)
+        public async Task<IActionResult> Login(UsuarioModel usuario)
         {
+            usuario.SetSenhaHash(usuario);
             var teste = _context.Usuarios.Where(x => x.email.Equals(usuario.email) && x.senha.Equals(usuario.senha)).FirstOrDefault();
 
             if (teste != null)
