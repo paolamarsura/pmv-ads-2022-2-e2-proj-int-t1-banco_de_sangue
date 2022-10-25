@@ -1,0 +1,39 @@
+﻿@model InstituicaoModel
+    @{
+        ViewData["Title"] = "Editar instituição";
+    }
+
+    
+
+<div class="log-form">
+
+    <div class="text-center">
+        <h2>Editar instituições de banco de sangue</h2>
+    </div>
+    
+    <form asp-controller="Instituicao" asp-action="Editar" method="post">
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Nome da instituição</label>
+            <input type="text" asp-for="nome" class="form-control" id="formGroupExampleInput" placeholder="Nome da instituição">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Cidade</label>
+            <input type="text" asp-for="cidade" class="form-control" id="formGroupExampleInput2" placeholder="Cidade">
+        </div>
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Endereço da instituição</label>
+            <input type="text" asp-for="endereco" class="form-control" id="formGroupExampleInput2" placeholder="Endereço">
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Telefone da instituição</label>
+            <input type="text" asp-for="telefone" class="form-control" id="formGroupExampleInput2" placeholder="Telefone">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Editar</button>
+        <a class="btn btn-secondary btn-block" asp-controller="Home" asp-action="Index" role="button">Apagar</a>
+
+    </form>
+</div>

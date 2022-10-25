@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Confirmação apagar a instituição cadastrada";
+
+}
+
+<div class="text-center">
+    <h3>Você realmente deseja excluir a instituição cadastrada</h3>
+</div>
+
+<a class="btn-primary btn-block" role="button" asp-controller="Instituicao" asp-action="Index"> Cancelar exclusão</a>
+<a class="btn-danger btn-block" role="button" asp-controller="Instituicao" asp-action="Apagar"> Confirmar exclusão</a>

@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.senha)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.email">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.email">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.email">Delete</a>
+                <a asp-controller="CadastroUsuario" asp-action="Editar" asp-route-id="@item.email">Editar</a> |
+                
+                <a asp-controller="CadastroUsuario"asp-action="Apagar" asp-route-id="@item.email">Apagar</a>
             </td>
         </tr>
 }
