@@ -15,9 +15,7 @@ namespace BancoDeSangue.Models
 
         public bool gripeProcessoInfeccioso { get; set; }
 
-        public bool tatoo { get; set; }
-
-        public bool jejum { get; set; }
+        public bool tattoo { get; set; }
 
         public bool malariaChagas { get; set; }
 
@@ -27,6 +25,8 @@ namespace BancoDeSangue.Models
 
         public bool procCirurgico { get; set; }
 
+        
     }
 
+    
 }

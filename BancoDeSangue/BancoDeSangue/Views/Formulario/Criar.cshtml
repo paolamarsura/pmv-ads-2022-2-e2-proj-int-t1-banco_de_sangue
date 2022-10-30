@@ -1,146 +1,104 @@
 ﻿@model FormularioModel
-@{
-    ViewData["Title"] = "Formulário de potencial doador";
-
-}
-
 
 <div class="log-form">
 
     <h1>Descubra se você é um potencial doador de sangue! Preencha o formulário abaixo!</h1>
 
-    <form>
+    <form asp-action="Criar" asp-controller="Formulario" method="post">
 
         <div class="mb-3">
             <div class="form-check form-check-inline">
                 <label class="input-group-text" for="inputGroupSelect01">Você tem mais de 18 anos e menos de 60?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
+                <input asp-for="idade" type="radio" name="idade" value=true id="r_idade" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
+                <input asp-for="idade" type="radio" name="idade" value=false id="r_idade" />
+                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
             </div>
-
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
-            </div>
-
         </div>
 
         <div class="mb-3">
             <div class="form-check form-check-inline">
                 <label class="input-group-text" for="inputGroupSelect01">Qual o seu sexo?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Feminino</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Masculino</label>
+                <input asp-for="sexo" type="radio" name="sexo" value=true id="r_sexo" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Feminino </label>
+                <input asp-for="sexo" type="radio" name="sexo" value=false id="r_sexo" />
+                <label class="form-check-label" for="inlineCheckbox1"> Masculino </label>
             </div>
         </div>
 
         <div class="mb-3">
             <div class="form-check form-check-inline">
                 <label class="input-group-text" for="inputGroupSelect01">Você tem mais de 50kg?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
+                <input asp-for="peso" type="radio" name="peso" value=true id="r_peso" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
+                <input asp-for="peso" type="radio" name="peso" value=false id="r_peso" />
+                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
             </div>
         </div>
+
         <div class="mb-3">
             <div class="form-check form-check-inline">
                 <label class="input-group-text" for="inputGroupSelect01">Você esta gripado ou apresenta um processo infeccioso?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
+                <input asp-for="gripeProcessoInfeccioso" type="radio" name="gripeProcessoInfeccioso" value=true id="r_gripeProcessoInfeccioso" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
+                <input asp-for="gripeProcessoInfeccioso" type="radio" name="gripeProcessoInfeccioso" value=false id="r_gripeProcessoInfeccioso" />
+                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
             </div>
         </div>
 
         <div class="mb-3">
             <div class="form-check form-check-inline">
                 <label class="input-group-text" for="inputGroupSelect01">Você fez tatuagem há menos de 1 ano?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você esta em jejum?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
+                <input asp-for="tattoo" type="radio" name="tattoo" value=true id="r_tattoo" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
+                <input asp-for="tattoo" type="radio" name="tattoo" value=false id="r_tattoo" />
+                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
             </div>
         </div>
 
         <div class="mb-3">
             <div class="form-check form-check-inline">
                 <label class="input-group-text" for="inputGroupSelect01">Você já teve Malária ou doença de Chagas?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
+                <input asp-for="malariaChagas" type="radio" name="malariaChagas" value=true id="r_malariaChagas" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
+                <input asp-for="malariaChagas" type="radio" name="malariaChagas" value=false id="r_malariaChagas" />
+                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
             </div>
         </div>
 
         <div class="mb-3">
             <div class="form-check form-check-inline">
                 <label class="input-group-text" for="inputGroupSelect01">Você já teve hepatite?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
+                <input asp-for="hepatite" type="radio" name="hepatite" value=true id="r_hepatite" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
+                <input asp-for="hepatite" type="radio" name="hepatite" value=false id="r_hepatite" />
+                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
             </div>
         </div>
 
         <div class="mb-3">
             <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você teve exposição a  situações de risco para contaminação com o HIV?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
+                <label class="input-group-text" for="inputGroupSelect01">
+                    Você teve exposição a  situações de risco para contaminação com o HIV?
+                </label>
+                <input asp-for="riscoHIV" type="radio" name="riscoHIV" value=true id="r_riscoHIV" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
+                <input asp-for="riscoHIV" type="radio" name="riscoHIV" value=false id="r_riscoHIV" />
+                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
             </div>
         </div>
 
         <div class="mb-3">
             <div class="form-check form-check-inline">
                 <label class="input-group-text" for="inputGroupSelect01">Você passou por procedimentos cirúrgicos nos últimos 6 meses?</label>
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Sim</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Não</label>
+                <input asp-for="procCirurgico" type="radio" name="procCirurgico" value=true id="r_procCirurgico" checked>
+                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
+                <input asp-for="procCirurgico" type="radio" name="procCirurgico" value=false id="r_procCirurgico" />
+                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
             </div>
         </div>
+
+        <input type="submit" value="Submit">
 
     </form>
 </div>
@@ -150,6 +108,15 @@
 
 
 
+
+
+@*<div>
+    Select Gender: <br />
+    Male: @Html.RadioButton("Gender", "male")
+    Female: @Html.RadioButton("Gender", "female")
+
+    <input type="submit" value="Submit">*@
+@*</div>*@
 
 
 
