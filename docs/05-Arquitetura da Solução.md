@@ -38,7 +38,7 @@ Abaixo segue a lista de tecnologias utilizadas neste projeto:
 
 ![image](https://user-images.githubusercontent.com/112259936/198887846-65b43edc-656b-4a46-a23e-51897fe87903.png)
 
-### Processo de entrega continua
+### Processo de entrega contínua
 
 Com ajuda de ferramentas como github e orquestração do docker, vamos criar um script de entrega continua de modo que toda vez que rodarmos o script as atualizações definidas e revisadas na branch master sejam publicadas, verifique o arquivo docker-compose.yml na pasta raiz do projeto.
 
