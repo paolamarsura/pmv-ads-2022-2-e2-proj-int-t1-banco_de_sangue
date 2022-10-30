@@ -1,0 +1,43 @@
+version: '3.7'
+
+services:
+  aplicacao:
+    image: mcr.microsoft.com/dotnet/core/samples:aspnetapp
+    ports:
+      - 80
+      - 443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    depends_on:
+      - postgre_db
+    networks:
+      - puc_net
+  
+  postgre_db:
+    image: postgre:latest
+    ports:
+      - 5432
+    restart: always
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      - POSTGRE_USER=user
+      - POSTGRE_PASSWORD=pass
+      - POSTGRE_DB=doesangue
+    networks:
+      - puc_net
+
+networks:
+  puc_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/24
+
+volumes:
+  db-data:
