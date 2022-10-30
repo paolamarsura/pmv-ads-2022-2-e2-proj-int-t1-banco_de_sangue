@@ -32,12 +32,6 @@ namespace BancoDeSangue.Controllers
             return View();
         }
 
-        public string CheckRadio(Microsoft.AspNetCore.Http.IFormCollection form)
-        {
-            string gender = form["Gender"].ToString();
-            return gender;
-        }
-
     }
 }
 
