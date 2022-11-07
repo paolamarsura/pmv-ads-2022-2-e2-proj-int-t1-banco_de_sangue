@@ -1,8 +1,25 @@
 # Registro de Testes de Usabilidade
 
-Após realizar os testes de usabilidade, obtém-se um relatório a partir das análises realizadas. O Registro de Testes de Usabilidade é um relatório que contém as evidências dos testes e relatos dos usuários participantes, baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso desta etapa.
+- No dia 30/10/2022 foram executados os primeiros testes de usabilidade, neste momento a proposta foi a interação com o formulário a fim de que o participante possa avaliar a fluidez e facilidade de compreensão do mesmo. O ambiente foi preparado, e a proposta explicada por um membro do grupo, o teste teve cerca de 40 segundos de execução e foi realizado neste momento na máquina de um dos membros do grupo dado a aplicação ainda não estar hospeada online. Abaixo o vídeo TU-01 mostra como foi esta execução. o Screencast foi obtido pelo meio do OBS STUDIO como já definidio anteriomente. 
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Registro de Testes de Usabilidade”.
+https://user-images.githubusercontent.com/103156976/198896052-36530b54-38e3-49df-8437-22b6c9f5cf50.mp4
 
-> **Links Úteis**:
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+* Participante 1 - sexo masculino, 32 anos, potencial doador. 
+
+Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
+
+Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
+
+Você considera a aplicação relevante? Sim: [x] Não: [ ]
+
+Qual a sua sugestão de melhoria? O formulário não me deu retorno. 
+
+* Participante 2 - sexo masculino, 25 anos, potencial doador. 
+
+Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
+
+Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
+
+Você considera a aplicação relevante? Sim: [x] Não: [ ]
+
+Qual a sua sugestão de melhoria? A ideia é boa, porém ainda não é usual. 

@@ -25,20 +25,20 @@ O projeto da base de dados corresponde à representação das entidades e relaci
  
 ![BDFISICO](https://user-images.githubusercontent.com/103156976/193477261-5e3243b5-6787-419d-b6f7-eb6b20c4b6ac.JPG)
 
+## Tecnologias Utilizadas, arquitetura e hospedagem
 
-## Tecnologias Utilizadas
+Abaixo segue a lista de tecnologias utilizadas neste projeto:
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+- **Controle de Versão:** Git no Github
+- **Linguagem:** ASP.NET MVC
+- **SGBD:** POSTGRESQL
+- **IDE:** Visual Studio 2019
+- **Orquestrador:** Docker
+- **Hospedagem:** Google Cloud IAM
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+![image](https://user-images.githubusercontent.com/112259936/198887846-65b43edc-656b-4a46-a23e-51897fe87903.png)
 
-## Hospedagem
+### Processo de entrega contínua
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+Com ajuda de ferramentas como github e orquestração do docker, vamos criar um script de entrega continua de modo que toda vez que rodarmos o script as atualizações definidas e revisadas na branch master sejam publicadas, verifique o arquivo docker-compose.yml na pasta raiz do projeto.
 
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
