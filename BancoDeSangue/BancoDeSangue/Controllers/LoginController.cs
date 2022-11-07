@@ -21,19 +21,26 @@ namespace BancoDeSangue.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Login(UsuarioModel usuario)
+        public IActionResult Login(UsuarioModel usuario)
         {
             usuario.SetSenhaHash(usuario);
-            var teste = _context.Usuarios.Where(x => x.email.Equals(usuario.email) && x.senha.Equals(usuario.senha)).FirstOrDefault();
+            //var teste = _context.Usuarios.Where(x => x.email.Equals(usuario.email) && x.senha.Equals(usuario.senha)).FirstOrDefault();
+            var usuarioResposta = _context.Usuarios.Where(x => x.email.Equals(usuario.email)).FirstOrDefault();
 
-            if (teste != null)
+            if (usuarioResposta != null && usuarioResposta.email.Equals(usuario.email) && usuarioResposta.senha.Equals(usuario.senha))
             {
-                return RedirectToAction("Privacy", "Home");
+                if (usuarioResposta.perfil.Equals("ADMIN"))
+                {
+                    return RedirectToAction("ListaDeUsuarios", "Login");
+                }
+                else
+                {
+                    return RedirectToAction("Privacy", "Home");
+                }
             }
             else
             {
-
-                return RedirectToAction("Index");
+                return RedirectToAction("Privacy", "Home");
             }
         }
 
@@ -54,4 +61,3 @@ namespace BancoDeSangue.Controllers
         }
     }
 }
-    

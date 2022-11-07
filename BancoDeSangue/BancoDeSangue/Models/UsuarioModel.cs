@@ -14,6 +14,8 @@ namespace BancoDeSangue.Models
 
         public String senha { get; set; }
 
+        public String perfil { get; set; }
+
         public void SetSenhaHash(UsuarioModel usuario)
         {
             this.senha = usuario.senha.GerarHash();
