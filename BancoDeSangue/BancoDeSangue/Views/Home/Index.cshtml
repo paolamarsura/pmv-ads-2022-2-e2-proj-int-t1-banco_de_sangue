@@ -1,8 +1,30 @@
-﻿@{
-    ViewData["Title"] = "Página Inicial";
+﻿@model UsuarioModel
+@{
+    ViewData["Title"] = "Login";
 }
 
 <div class="text-center">
     <h1 class="display-4">Quero doar sangue, eu posso?</h1>
-    <p>Aplicação interativa para descobrir possíveis doadores de sangue</p>
+</div>
+
+<div class="log-form">
+    <div class="text-center">
+        <h1>Faça seu login</h1>
+        <form asp-controller="Login" asp-action="Login" method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                <input type="email" asp-for="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputsenha1" class="form-label">Senha</label>
+                <input type="password" asp-for="senha" class="form-control" id="exampleInputsenha1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Acessar</button>
+            <a class="btn btn-secondary btn-block" asp-controller="CadastroUsuario" asp-action="Criar" role="button">Cadastre-se</a>
+        </form>
+    </div>
 </div>

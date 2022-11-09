@@ -34,11 +34,12 @@ namespace BancoDeSangue.Controllers
                     return RedirectToAction("ListaDeUsuarios", "Login");
                 }
                 else
+
                 {
-                    return RedirectToAction("Privacy", "Home");
+                    return RedirectToAction("Criar", "Formulario");
                 }
             }
-            else
+            else 
             {
                 return RedirectToAction("Privacy", "Home");
             }

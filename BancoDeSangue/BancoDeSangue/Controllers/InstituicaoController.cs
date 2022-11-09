@@ -47,7 +47,12 @@ namespace BancoDeSangue.Controllers
             return View("ListaDeInstituicao", teste);
         }
 
-
+        public IActionResult InstituicoesEndereco()
+        {
+            var teste = _instituicaoRepositorio.BuscarTodos();
+            return View("InstituicoesEndereco", teste);
+        }
+        
 
         [HttpPost]
         public IActionResult Cadastrar(InstituicaoModel instituicao)

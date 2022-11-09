@@ -1,11 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@model UsuarioModel
+@{
+    ViewData["Title"] = "Privacy";
 }
-<h1>@ViewData["Title"]</h1>
-
 <p>Usuário não cadastrado</p>
 
+<form>
+    <button type="submit" class="btn btn-primary btn-block" asp-controller="CadastroUsuario" asp-action="Criar" role="button">Cadastrar novo usuário</button>
+</form>
 
-@*<form asp-controller="Login" asp-action="ListaDeUsuarios" method="get">
-    <button type="submit" class="btn btn-primary btn-block">Lista de Usuários</button>
-</form>*@

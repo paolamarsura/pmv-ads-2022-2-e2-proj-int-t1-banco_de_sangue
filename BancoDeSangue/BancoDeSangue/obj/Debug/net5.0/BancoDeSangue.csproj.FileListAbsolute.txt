@@ -437,3 +437,4 @@ C:\dev\Projetos\CSharp\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\BancoDeSang
 C:\dev\Projetos\CSharp\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\BancoDeSangue\BancoDeSangue\obj\Debug\net5.0\Razor\Views\Formulario\Criar.cshtml.g.cs
 C:\dev\Projetos\CSharp\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\BancoDeSangue\BancoDeSangue\obj\Debug\net5.0\Razor\Views\Formulario\Apagar.cshtml.g.cs
 C:\dev\Projetos\CSharp\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\BancoDeSangue\BancoDeSangue\obj\Debug\net5.0\Razor\Views\Formulario\Index.cshtml.g.cs
+C:\dev\Projetos\CSharp\pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue\BancoDeSangue\BancoDeSangue\obj\Debug\net5.0\Razor\Views\Instituicao\InstituicoesEndereco.cshtml.g.cs

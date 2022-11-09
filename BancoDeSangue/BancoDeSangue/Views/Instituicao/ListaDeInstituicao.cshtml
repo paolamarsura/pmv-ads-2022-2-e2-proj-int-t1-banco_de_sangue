@@ -7,7 +7,7 @@
     <h1>Lista de Instituição</h1>
 
     <p>
-        <a asp-action="Create">Create New</a>
+        <a asp-controller="Login" asp-action="ListaDeUsuarios" role="button">Voltar</a>
     </p>
     <table class="table">
         <thead>
@@ -30,26 +30,27 @@
         <tbody>
             @foreach (var item in Model)
             {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.cidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.endereco)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.telefone)
-                </td>
-                <td>
-                    <a asp-controller="Instituicao"asp-action="Editar" asp-route-id="@item.nome">Editar</a> |
-                    
-                    <a asp-controller="Instituicao"asp-action="Apagar" asp-route-id="@item.nome">Voltar</a>
-                </td>
-              
-            </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.endereco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.telefone)
+                    </td>
+                    <td>
+                        <a asp-controller="Instituicao" asp-action="Editar" asp-route-id="@item.nome">Editar</a> |
+
+                        <a asp-controller="Instituicao" asp-action="Apagar" asp-route-id="@item.nome">Apagar</a>
+                    </td>
+
+                </tr>
             }
-        </tbody>
+        </tbody>        
+
     </table>

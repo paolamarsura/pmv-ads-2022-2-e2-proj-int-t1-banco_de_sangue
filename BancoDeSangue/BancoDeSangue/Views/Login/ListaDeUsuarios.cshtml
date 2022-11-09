@@ -4,11 +4,33 @@
     ViewData["Title"] = "ListaDeUsuarios";
 }
 
-<h1>ListaDeUsuarios</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Instituicao" asp-action="Cadastrar">Cadastrar nova instituição</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Instituicao" asp-action="ListaDeInstituicao">Lista de Instituições</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="ListaDeUsuarios">Usuários Cadastrados</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<h1>Lista de usuários cadastrados</h1>
+
 <table class="table">
     <thead>
         <tr>
@@ -22,20 +44,22 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.senha)
-            </td>
-            <td>
-                <a asp-controller="CadastroUsuario" asp-action="Editar" asp-route-id="@item.email">Editar</a> |
-                
-                <a asp-controller="CadastroUsuario"asp-action="Apagar" asp-route-id="@item.email">Apagar</a>
-            </td>
-        </tr>
-}
-    </tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.senha)
+                </td>
+                <td>
+                    <a asp-controller="CadastroUsuario" asp-action="Editar" asp-route-id="@item.email">Editar</a> |
+
+                    <a asp-controller="CadastroUsuario" asp-action="Apagar" asp-route-id="@item.email">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>   
+
 </table>
