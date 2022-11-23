@@ -14,8 +14,8 @@ namespace BancoDeSangue.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.30")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("BancoDeSangue.Models.InstituicaoModel", b =>
@@ -44,8 +44,11 @@ namespace BancoDeSangue.Migrations
 
             modelBuilder.Entity("BancoDeSangue.Models.UsuarioModel", b =>
                 {
-                    b.Property<string>("email")
+                    b.Property<string>("nome")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("perfil")
                         .HasColumnType("nvarchar(max)");
@@ -53,7 +56,7 @@ namespace BancoDeSangue.Migrations
                     b.Property<string>("senha")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("email");
+                    b.HasKey("nome");
 
                     b.ToTable("Usuarios");
                 });

@@ -3,7 +3,51 @@
     ViewData["Title"] = "Cadastro de Usuário";
 }
 
-<div class="log-form">
+<header class="header-rounded-images">
+    <div class="page-header min-vh-90">
+        <img class="position-absolute fixed-top ms-auto h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0" src="/img/enfermeira.webp" alt="image" loading="lazy">
+        <div class="container">
+            <div class="row">
+                <div class="card mt-8 col-lg-4">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1 text-center py-4">
+                            <h4 class="font-weight-bolder text-white mt-1">Salve Vidas!</h4>
+                            <p class="mb-1 text-white text-sm">Nunca compartilharemos seus dados.</p>
+                        </div>
+                    </div>
+                    <div class="card-body pb-3">
+                        <form asp-controller="CadastroUsuario" asp-action="Criar" method="post">
+                            <div class="input-group input-group-outline mb-3">
+                                <label class="form-label">Nome</label>
+                                <input type="text" asp-for="nome" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline mb-3">
+                                <label class="form-label">E-mail</label>
+                                <input type="email" asp-for="email" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline mb-3">
+                                <label class="form-label">Senha</label>
+                                <input type="password" asp-for="senha" class="form-control">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn bg-gradient-primary w-100 mt-4 mb-0">Realizar Cadastro</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center pt-0 px-sm-4 px-1">
+                        <p class="mb-4 mx-auto">
+                            Já tem cadastro?
+                            <a href="/login" class="text-primary text-gradient font-weight-bold">Faça o Login</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!--<div class="log-form">
     <h2>Faça seu cadastro</h2>
     <form asp-controller="CadastroUsuario" asp-action="Criar" method="post">
 
@@ -19,4 +63,5 @@
         <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
         <a class="btn btn-secondary btn-block" asp-controller="Login" asp-action="Index" role="button">Voltar</a>
     </form>
-</div>
+</div>--!>
+
