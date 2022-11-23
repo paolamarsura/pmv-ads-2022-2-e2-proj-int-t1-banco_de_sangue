@@ -10,6 +10,9 @@ namespace BancoDeSangue.Models
     public class UsuarioModel
     {
         [Key]
+
+        public String nome { get; set; }
+        
         public String email { get; set; }
 
         public String senha { get; set; }
