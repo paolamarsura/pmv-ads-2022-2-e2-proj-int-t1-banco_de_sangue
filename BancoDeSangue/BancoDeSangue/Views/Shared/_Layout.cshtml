@@ -1,43 +1,128 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Banco de Sangue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] - Projeto Doe Sangue</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <link id="pagestyle" href="~/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+    <link href="~/css/icones.css" rel="stylesheet" />
+    <link href="~/css/svg.css" rel="stylesheet" />
+
+
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Banco de Sangue</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">                                                                       
-                        
-                    </ul>
-                </div>
+
+<body class="index-page bg-gray-200">
+    <!--NAVEGAÇÃO-->
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                    <div class="container-fluid px-0">
+                        <!--MENU HAMBURGUER-->
+                        <a class="navbar-brand font-weight-bolder ms-sm-3" href="/" rel="tooltip" title="Projeto PUC MG">
+                            PROJETO
+                        </a>
+                        <!--MENU HAMBURGUER-->
+                        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon mt-2">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </span>
+                        </button>
+
+                        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                            <ul class="navbar-nav navbar-nav-hover ms-auto">
+                                <li class="nav-item dropdown dropdown-hover mx-2">
+                                    <a href="/#historias" class="nav-link ps-2 d-flex cursor-pointer align-items-center">
+                                        <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
+                                        Histórias
+                                    </a>
+                                </li>
+
+                                <li class="nav-item dropdown dropdown-hover mx-2">
+                                    <a href="/#sobre" class="nav-link ps-2 d-flex cursor-pointer align-items-center">
+                                        <i class="material-icons opacity-6 me-2 text-md">view_day</i>
+                                        Sobre
+                                    </a>
+                                </li>
+
+                                <li class="nav-item dropdown dropdown-hover mx-2">
+                                    <a href="/#parceiros" class="nav-link ps-2 d-flex cursor-pointer align-items-center">
+                                        <i class="material-icons opacity-6 me-2 text-md">article</i>
+                                        Parceiros
+                                    </a>
+                                </li>
+
+                                <li class="nav-item ms-lg-auto">
+                                    <a class="nav-link nav-link-icon me-2" href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue" target="_blank">
+                                        <i class="fa fa-github me-1"></i>
+                                        <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github">Github</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item my-auto ms-3 ms-lg-0">
+                                    <a href="/login" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">DOE SANGUE AGORA!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - BancoDeSangue
+    @RenderBody()
+
+
+    <!--RODAPÉ TECNOLOGIAS-->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <div class="text-center">
+                    <h3 class="mt-5 mb-4">Desenvolvido  com as seguintes tecnologias</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-2 col-4">
+                            <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">
+                                <img src="https://camo.githubusercontent.com/2512b49c89512f2ff3718f7257f48ed5c46a4e331abbd890b6c5e8c0e458434f/68747470733a2f2f676574626f6f7473747261702e636f6d2f646f63732f352e322f6173736574732f6272616e642f626f6f7473747261702d6c6f676f2d736861646f772e706e67" title="Bootstrap 5" height="60">
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-4">
+                            <a href="https://jquery.com/" target="_blank">
+                                <img src="https://exuberantsolutions.com/course_logo/jquery-icon.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="jQuery" height="60">
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-4">
+                            <a href="javascript:;">
+                                <img src="https://prakashinfotech.com/files/catalog/technology/Technology/Front%20End/aspnet_logo.webp" title="ASP.NET" height="60">
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-4">
+                            <a href="javascript:;">
+                                <img src="https://aleson-itc.com/wp-content/uploads/2020/03/sql-server-2019.png" title="SQL Server 2019" height="60">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/material-ui.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
