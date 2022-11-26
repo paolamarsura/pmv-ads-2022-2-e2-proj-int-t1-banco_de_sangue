@@ -17,5 +17,7 @@ namespace BancoDeSangue.Data
         public DbSet<UsuarioModel> Usuarios { get; set; }
 
         public DbSet<InstituicaoModel> Instituicoes { get; set; }
+
+        public DbSet<FormularioModel> Formulario { get; set; }
     }
 }

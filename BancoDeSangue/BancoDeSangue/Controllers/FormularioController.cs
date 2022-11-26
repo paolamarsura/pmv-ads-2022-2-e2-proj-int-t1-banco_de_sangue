@@ -1,4 +1,5 @@
 ﻿using BancoDeSangue.Models;
+using BancoDeSangue.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,15 +16,10 @@ namespace BancoDeSangue.Controllers
             return View();
         }
 
-        public IActionResult Criar()
-        {
-            return View();
-        }
 
         [HttpPost]
         public IActionResult Criar(FormularioModel formularioModel)
         {
-            
             return View();
         }
 
