@@ -22,36 +22,47 @@ namespace BancoDeSangue.Controllers
 
         [HttpPost]
         public IActionResult Login(UsuarioModel usuario)
-        {
+        {            
+            
+            if (String.IsNullOrWhiteSpace(usuario.email) || String.IsNullOrWhiteSpace(usuario.senha)) {
+                usuario.erro = "Preencha o Login e senha!";
+                return View("Index", usuario);
+            }
+
             usuario.SetSenhaHash(usuario);
-            //var teste = _context.Usuarios.Where(x => x.email.Equals(usuario.email) && x.senha.Equals(usuario.senha)).FirstOrDefault();
-            var usuarioResposta = _context.Usuarios.Where(x => x.email.Equals(usuario.email)).FirstOrDefault();
-
-            if (usuarioResposta != null && usuarioResposta.email.Equals(usuario.email) && usuarioResposta.senha.Equals(usuario.senha))
+            
+            var email = usuario.email.Trim().ToLower();
+            var usuarioResposta = _context.Usuarios.Where(x => x.email.Trim().ToLower().Equals(email)).FirstOrDefault();
+            if (usuarioResposta == null)
             {
-                if (usuarioResposta.perfil.Equals("ADMIN"))
-                {
-                    return RedirectToAction("ListaDeUsuarios", "Login");
-                }
-                else
+                usuario.erro = "Usuário não existe!";
+                return View("Index", usuario);
+            }            
 
-                {
-                    return RedirectToAction("Criar", "Formulario");
-                }
-            }
-            else 
+            if (!usuarioResposta.senha.Equals(usuario.senha))
             {
-                return RedirectToAction("Privacy", "Home");
+                usuario.erro = "Usuário e senha inválido!";
+                return View("Index", usuario);
             }
+
+            if (String.IsNullOrWhiteSpace(usuarioResposta.perfil)) {
+                return RedirectToAction("Index", "Formulario");
+            }
+
+            if (usuarioResposta.perfil.Equals("ADMIN"))
+            {
+                return RedirectToAction("ListaDeUsuarios", "Login");
+            }
+
+            usuario.erro = "Favor entrar em contato com o suporte técnico!";
+            return View("Index", usuario);
+
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
-        private bool UsuarioModelExists(string id)
-        {
-            return _context.Usuarios.Any(e => e.email == id);
+            var usuario = new UsuarioModel();
+            return View(usuario);
         }
 
         // GET: LoginS
@@ -61,4 +72,6 @@ namespace BancoDeSangue.Controllers
             return View("ListaDeUsuarios", teste);
         }
     }
+
+
 }
