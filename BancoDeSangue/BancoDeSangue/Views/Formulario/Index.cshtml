@@ -1,5 +1,313 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model FormularioModel
 @{
+    ViewData["Title"] = "Cadastro de Usuário";
 }
+<section class="pt-3 pt-md-5 pb-md-5 pt-lg-8 bg-gray-200">
+    <div class="container">
+        <div class="row">
+            <!--MENU LATERAL-->
+            <div class="col-lg-3 mb-lg-0 mb-5 mt-8 mt-md-5 mt-lg-0">
+                <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-10 shadow-lg">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/formulario">
+                            <i class="material-icons text-dark opacity-5 pe-2">widgets</i>
+                            Formulário do Doador
+                        </a>
+                    </li>                   
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="#hyperlinking">
+                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                            Perfil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/login">
+                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--FORMULÁRIO-->
+            <div class="col-lg-9">
+                <div class="card shadow-lg mb-5">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                            <h3 class="text-white mb-0">Formulário do Doador</h3>
+                            <p class="text-white opacity-8 mb-0">Descubra se você é um potencial doador de sangue! Preencha o formulário abaixo!</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-5">
+                        <div class="log-form">
+                            <form asp-action="Criar" asp-controller="Formulario" method="post">
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static">
+                                                <label>Data de Nascimento</label>
+                                                <input type="date" class="form-control" placeholder="28/08/1986">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static mb-4">
+                                                <label>Peso em KG</label>
+                                                <input class="form-control" type="number" min="0" step="0.10">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static mb-4">
+                                                <label>Sexo</label>
+                                                <select class="form-control">
+                                                    <option>Masculino</option>
+                                                    <option>Feminino</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static">
+                                                <label>Doou sangue? Informe a data que fez</label>
+                                                <input type="date" class="form-control" placeholder="22/11/2022">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Está gravida ou teve filho recente?</span>
+                                                <span class="text-xs d-block">Marque sim para 90 dias após parto normal e 180 dias após cesariana.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Amamentando?</span>
+                                                <span class="text-xs d-block">Marque sim se está amamentando ou se deixou de amamentar há 6 meses.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Ficou ou está resfriado?</span>
+                                                <span class="text-xs d-block">Marque se você teve resfriado nos últimos 7 dias.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tatuagem, maquiagem definitiva e micropigmentação.</span>
+                                                <span class="text-xs d-block">Marque se fez uma das intervenções nos últimos 12 meses.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Manteve relação sexual de risco?</span>
+                                                <span class="text-xs d-block">Marque se manteve relação nos últimos 12 meses.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Extração dentária?</span>
+                                                <span class="text-xs d-block">Marque se extraiu nos últimos 7 dias.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Cirurgia com anestesia geral?</span>
+                                                <span class="text-xs d-block">Marque se fez cirurgias deste tipo nas últimas 4 semanas.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Fez Acupuntura?</span>
+                                                <span class="text-xs d-block">Marque se fez ontem ou hoje.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tomou vacina da Gripe?</span>
+                                                <span class="text-xs d-block">Marque se tomou nos últimos 2 dias.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Herpes labial nos últimos 7 dias ou Zoster nos últimos 6 meses?</span>
+                                                <span class="text-xs d-block">Marque se a cura se deu antes de 6 meses.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Teve Malária nos últimos 12 meses?</span>
+                                                <span class="text-xs d-block">Marque também se esteve em países ou estados com surto.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Teve Febre Amarela nos últimos 6 meses?</span>
+                                                <span class="text-xs d-block">Marque se esteve em países ou estados com alta prevalência de malária.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Foi diagnosticado com Convid nos últimos 30 dias?</span>
+                                                <span class="text-xs d-block">Marque mesmo se for assintomático.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tem Parkinson?</span>
+                                                <span class="text-xs d-block">Inforse se tem Parkison.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tem HIV?</span>
+                                                <span class="text-xs d-block">Informe se tem AIDS.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tem Hepatite?</span>
+                                                <span class="text-xs d-block">Teve ou tem hepatite A, B ou C.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-end">
+                                        <button type="submit" class="btn bg-gradient-primary btn-behance mt-3 mb-0" asp-controller="Instituicao" asp-action="InstituicoesEndereco" role="button">Enviar Formulário</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

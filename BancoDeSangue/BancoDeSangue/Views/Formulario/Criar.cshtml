@@ -1,122 +1,561 @@
 ﻿@model FormularioModel
+@{
+    ViewData["Title"] = "Cadastro de Usuário";
+}
+<section class="pt-3 pt-md-5 pb-md-5 pt-lg-8 bg-gray-200">
+    <div class="container">
+        <div class="row">
+            <!--MENU LATERAL-->
+            <div class="col-lg-3 mb-lg-0 mb-5 mt-8 mt-md-5 mt-lg-0">
+                <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-10 shadow-lg">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/formulario">
+                            <i class="material-icons text-dark opacity-5 pe-2">widgets</i>
+                            Formulário do Doador
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/lista">
+                            <i class="material-icons text-dark opacity-5 pe-2">cookie</i>
+                            Usuários
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="#license">
+                            <i class="material-icons text-dark opacity-5 pe-2">description</i>
+                            Instituições
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="#hyperlinking">
+                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                            Perfil
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-<div class="log-form">
+            <!--LISTA -->
+            <div class="col-lg-9">
+                <div class="card shadow-lg mb-5">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                            <h3 class="text-white mb-0">Lista de Usuários</h3>
+                            <p class="text-white opacity-8 mb-0">Todos os usuários estão aqui!</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-5">
+                        <div class="table-responsive">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome e Email</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tipo de Usuário</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Data de Cadastro</th>
+                                        <th class="text-secondary opacity-7"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">Ríder Cantuária</h6>
+                                                    <p class="text-xs text-secondary mb-0">rider.cantuaria@simply-vc.com.mt</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-success">Doador</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs">
+                                                Editar
+                                            </a>
+                                        </td>
+                                    </tr>
 
-    <h1>Descubra se você é um potencial doador de sangue! Preencha o formulário abaixo!</h1>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">HEMOAM</h6>
+                                                    <p class="text-xs text-secondary mb-0">hemoam@am.gov.br</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-secondary">Instituição</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">11/01/19</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="#!" class="text-secondary font-weight-bold text-xs">
+                                                Editar
+                                            </a>
+                                        </td>
+                                    </tr>
 
-    <form asp-action="Criar" asp-controller="Formulario" method="post">
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">Laura Pierre</h6>
+                                                    <p class="text-xs text-secondary mb-0">laura@criativa.com.br</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-success">Doador</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">19/09/17</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="#!" class="text-secondary font-weight-bold text-xs">
+                                                Editar
+                                            </a>
+                                        </td>
+                                    </tr>
 
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você tem mais de 18 anos e menos de 60?</label>
-                <input asp-for="idade" type="radio" name="idade" value=true id="r_idade" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
-                <input asp-for="idade" type="radio" name="idade" value=false id="r_idade" />
-                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">Michel Levi</h6>
+                                                    <p class="text-xs text-secondary mb-0">michael@globo.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-success">Doador</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">24/12/08</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="#!" class="text-secondary font-weight-bold text-xs">
+                                                Editar
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">HEMOSC</h6>
+                                                    <p class="text-xs text-secondary mb-0">doacao@sc.gov.br</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-secondary">Instituição</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">04/10/21</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="#!" class="text-secondary font-weight-bold text-xs">
+                                                Editar
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">HEMOSP</h6>
+                                                    <p class="text-xs text-secondary mb-0">hemosp@sp.gov.br</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-secondary">Instituição</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">14/09/20</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="#!" class="text-secondary font-weight-bold text-xs">
+                                                Editar
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--TELA EDICAO INSTITUIÇÃO -->
+            <div class="col-lg-9">
+                <div class="card shadow-lg mb-5">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                            <h3 class="text-white mb-0">Edição do Doador</h3>
+                            <p class="text-white opacity-8 mb-0">Ao editar informe a senha!</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="input-group input-group-static">
+                                    <label>Nome</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group input-group-static">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group input-group-static">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-end">
+                                <button type="submit" class="btn bg-gradient-primary btn-behance mt-3 mb-0" asp-controller="Instituicao" asp-action="InstituicoesEndereco" role="button">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--TELA EDICAO USUARIO/PERFIL -->
+            <div class="col-lg-9">
+                <div class="card shadow-lg mb-5">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                            <h3 class="text-white mb-0">Edição da Instituição</h3>
+                            <p class="text-white opacity-8 mb-0">Não esqueça de colocar o endereço!</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group input-group-static">
+                                    <label>Nome</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group input-group-static">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="input-group input-group-static">
+                                    <label>Endereço</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-end">
+                                <button type="submit" class="btn bg-gradient-primary btn-behance mt-3 mb-0" asp-controller="Instituicao" asp-action="InstituicoesEndereco" role="button">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--FORMULÁRIO-->
+            <div class="col-lg-9">
+                <div class="card shadow-lg mb-5">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                            <h3 class="text-white mb-0">Formulário do Doador</h3>
+                            <p class="text-white opacity-8 mb-0">Descubra se você é um potencial doador de sangue! Preencha o formulário abaixo!</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-5">
+                        <div class="log-form">
+                            <form asp-action="Criar" asp-controller="Formulario" method="post">
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static">
+                                                <label>Data de Nascimento</label>
+                                                <input type="date" class="form-control" placeholder="28/08/1986">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static mb-4">
+                                                <label>Peso em KG</label>
+                                                <input class="form-control" type="number" min="0" step="0.10">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static mb-4">
+                                                <label>Sexo</label>
+                                                <select class="form-control">
+                                                    <option>Masculino</option>
+                                                    <option>Feminino</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static">
+                                                <label>Doou sangue? Informe a data que fez</label>
+                                                <input type="date" class="form-control" placeholder="22/11/2022">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Está gravida ou teve filho recente?</span>
+                                                <span class="text-xs d-block">Marque sim para 90 dias após parto normal e 180 dias após cesariana.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Amamentando?</span>
+                                                <span class="text-xs d-block">Marque sim se está amamentando ou se deixou de amamentar há 6 meses.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Ficou ou está resfriado?</span>
+                                                <span class="text-xs d-block">Marque se você teve resfriado nos últimos 7 dias.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tatuagem, maquiagem definitiva e micropigmentação.</span>
+                                                <span class="text-xs d-block">Marque se fez uma das intervenções nos últimos 12 meses.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Manteve relação sexual de risco?</span>
+                                                <span class="text-xs d-block">Marque se manteve relação nos últimos 12 meses.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Extração dentária?</span>
+                                                <span class="text-xs d-block">Marque se extraiu nos últimos 7 dias.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Cirurgia com anestesia geral?</span>
+                                                <span class="text-xs d-block">Marque se fez cirurgias deste tipo nas últimas 4 semanas.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Fez Acupuntura?</span>
+                                                <span class="text-xs d-block">Marque se fez ontem ou hoje.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tomou vacina da Gripe?</span>
+                                                <span class="text-xs d-block">Marque se tomou nos últimos 2 dias.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Herpes labial nos últimos 7 dias ou Zoster nos últimos 6 meses?</span>
+                                                <span class="text-xs d-block">Marque se a cura se deu antes de 6 meses.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Teve Malária nos últimos 12 meses?</span>
+                                                <span class="text-xs d-block">Marque também se esteve em países ou estados com surto.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Teve Febre Amarela nos últimos 6 meses?</span>
+                                                <span class="text-xs d-block">Marque se esteve em países ou estados com alta prevalência de malária.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Foi diagnosticado com Convid nos últimos 30 dias?</span>
+                                                <span class="text-xs d-block">Marque mesmo se for assintomático.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tem Parkinson?</span>
+                                                <span class="text-xs d-block">Inforse se tem Parkison.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tem HIV?</span>
+                                                <span class="text-xs d-block">Informe se tem AIDS.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="d-flex col-md-12">
+                                            <div>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div class="ms-4">
+                                                <span class="text-dark font-weight-bold d-block text-sm">Tem Hepatite?</span>
+                                                <span class="text-xs d-block">Teve ou tem hepatite A, B ou C.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-end">
+                                        <button type="submit" class="btn bg-gradient-primary btn-behance mt-3 mb-0" asp-controller="Instituicao" asp-action="InstituicoesEndereco" role="button">Enviar Formulário</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Qual o seu sexo?</label>
-                <input asp-for="sexo" type="radio" name="sexo" value=true id="r_sexo" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Feminino </label>
-                <input asp-for="sexo" type="radio" name="sexo" value=false id="r_sexo" />
-                <label class="form-check-label" for="inlineCheckbox1"> Masculino </label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você tem mais de 50kg?</label>
-                <input asp-for="peso" type="radio" name="peso" value=true id="r_peso" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
-                <input asp-for="peso" type="radio" name="peso" value=false id="r_peso" />
-                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você esta gripado ou apresenta um processo infeccioso?</label>
-                <input asp-for="gripeProcessoInfeccioso" type="radio" name="gripeProcessoInfeccioso" value=true id="r_gripeProcessoInfeccioso" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
-                <input asp-for="gripeProcessoInfeccioso" type="radio" name="gripeProcessoInfeccioso" value=false id="r_gripeProcessoInfeccioso" />
-                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você fez tatuagem há menos de 1 ano?</label>
-                <input asp-for="tattoo" type="radio" name="tattoo" value=true id="r_tattoo" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
-                <input asp-for="tattoo" type="radio" name="tattoo" value=false id="r_tattoo" />
-                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você já teve Malária ou doença de Chagas?</label>
-                <input asp-for="malariaChagas" type="radio" name="malariaChagas" value=true id="r_malariaChagas" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
-                <input asp-for="malariaChagas" type="radio" name="malariaChagas" value=false id="r_malariaChagas" />
-                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você já teve hepatite?</label>
-                <input asp-for="hepatite" type="radio" name="hepatite" value=true id="r_hepatite" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
-                <input asp-for="hepatite" type="radio" name="hepatite" value=false id="r_hepatite" />
-                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">
-                    Você teve exposição a  situações de risco para contaminação com o HIV?
-                </label>
-                <input asp-for="riscoHIV" type="radio" name="riscoHIV" value=true id="r_riscoHIV" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
-                <input asp-for="riscoHIV" type="radio" name="riscoHIV" value=false id="r_riscoHIV" />
-                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div class="form-check form-check-inline">
-                <label class="input-group-text" for="inputGroupSelect01">Você passou por procedimentos cirúrgicos nos últimos 6 meses?</label>
-                <input asp-for="procCirurgico" type="radio" name="procCirurgico" value=true id="r_procCirurgico" checked>
-                <label class="form-check-label" for="inlineCheckbox1"> Sim </label>
-                <input asp-for="procCirurgico" type="radio" name="procCirurgico" value=false id="r_procCirurgico" />
-                <label class="form-check-label" for="inlineCheckbox1"> Não </label>
-            </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block" asp-controller="Instituicao" asp-action="InstituicoesEndereco" role="button">Enviar</button>
-
-    </form>
-</div>
-
-
-
-
-
-
-
-
-@*<div>
-    Select Gender: <br />
-    Male: @Html.RadioButton("Gender", "male")
-    Female: @Html.RadioButton("Gender", "female")
-
-    <input type="submit" value="Submit">*@
-@*</div>*@
+    </div>
+</section>
 
 
 
