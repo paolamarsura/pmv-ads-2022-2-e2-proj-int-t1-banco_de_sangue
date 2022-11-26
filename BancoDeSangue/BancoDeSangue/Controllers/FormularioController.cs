@@ -9,8 +9,15 @@ using System.Threading.Tasks;
 
 namespace BancoDeSangue.Controllers
 {
-    public class Formulario : Controller
+    public class FormularioController : Controller
     {
+        private readonly IFormularioRepositorio _formularioRepositorio;
+
+        public FormularioController(IFormularioRepositorio formularioRepositorio)
+        {
+            _formularioRepositorio = formularioRepositorio;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -20,10 +27,11 @@ namespace BancoDeSangue.Controllers
         [HttpPost]
         public IActionResult Criar(FormularioModel formularioModel)
         {
-            return View();
+            _formularioRepositorio.Adicionar(formularioModel);
+            return RedirectToAction("Index", "InstituicoesEndereco");
         }
 
-        public IActionResult Apagar()
+        public IActionResult Salvar()
         {
             return View();
         }
