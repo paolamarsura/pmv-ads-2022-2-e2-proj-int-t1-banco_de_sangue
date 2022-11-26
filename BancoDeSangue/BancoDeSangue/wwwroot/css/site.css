@@ -38,6 +38,10 @@ html {
   }
 }
 
+table tr {
+    border-top: 1px solid #8080803d;
+}
+
 .border-top {
   border-top: 1px solid #e5e5e5;
 }

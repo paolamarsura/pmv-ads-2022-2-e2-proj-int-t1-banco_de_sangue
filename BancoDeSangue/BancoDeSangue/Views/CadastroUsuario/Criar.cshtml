@@ -16,6 +16,10 @@
                         </div>
                     </div>
                     <div class="card-body pb-3">
+                        @if (Model.erro != null)
+                        {
+                            <div class="alert alert-warning text-black text-center text-bolder">@Model.erro</div>
+                        }
                         <form asp-controller="CadastroUsuario" asp-action="Criar" method="post">
                             <div class="input-group input-group-outline mb-3">
                                 <label class="form-label">Nome</label>
@@ -45,23 +49,4 @@
         </div>
     </div>
 </header>
-
-
-<!--<div class="log-form">
-    <h2>Faça seu cadastro</h2>
-    <form asp-controller="CadastroUsuario" asp-action="Criar" method="post">
-
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">E-mail</label>
-            <input type="email" asp-for="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input type="password" asp-for="senha" class="form-control" id="exampleInputPassword1">
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
-        <a class="btn btn-secondary btn-block" asp-controller="Login" asp-action="Index" role="button">Voltar</a>
-    </form>
-</div>--!>
 
