@@ -11,7 +11,11 @@ namespace BancoDeSangue.Repositorio
 
         List<UsuarioModel> BuscarTodos();
         UsuarioModel Adicionar(UsuarioModel usuarioModel);
-        bool temADM();
-        UsuarioModel CriarADM();
+        UsuarioModel Atualizar(UsuarioModel usuarioModel);
+        void CriarADM();
+        
+        UsuarioModel BuscarUsuario(int id);
+        
+        UsuarioModel BuscarUsuarioPorEmail(string email);
     }
 }

@@ -28,6 +28,9 @@ namespace BancoDeSangue.Models
         [NotMapped]
         public String erro{ get; set; }
 
+        [NotMapped]
+        public String sucesso { get; set; }
+
         public void SetSenhaHash(UsuarioModel usuario)
         {
             this.senha = usuario.senha.GerarHash();

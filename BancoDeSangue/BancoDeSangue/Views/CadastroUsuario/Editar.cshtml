@@ -1,22 +1,92 @@
 ﻿@model UsuarioModel
 @{
-    ViewData["Title"] = "Editar usuario";
+    ViewData["Title"] = "Edição de Usuário";
 }
 
-<div class="text-center">
-    <h2>Editar usuario</h2>
-</div>
+<section class="pt-3 pt-md-5 pb-md-5 pt-lg-8 bg-gray-200">
+    <div class="container">
+        <div class="row">
+            <!--MENU LATERAL-->
+            <div class="col-lg-3 mb-lg-0 mb-5 mt-8 mt-md-5 mt-lg-0">
+                <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-10 shadow-lg">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Login/ListaDeUsuarios">
+                            <i class="material-icons text-dark opacity-5 pe-2">widgets</i>
+                            Formulários
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Login/ListaDeUsuarios">
+                            <i class="material-icons text-dark opacity-5 pe-2">cookie</i>
+                            Usuários
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="#license">
+                            <i class="material-icons text-dark opacity-5 pe-2">description</i>
+                            Instituições
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="#hyperlinking">
+                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                            Perfil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/login">
+                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-    <form asp-controller="CadastroUsuario" asp-action="Editar" method="post">
-
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">E-mail</label>
-            <input type="email" asp-for="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!--TELA EDICAO USUARIO/PERFIL -->
+            <div class="col-lg-9">
+                <div class="card shadow-lg mb-5">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                            <h3 class="text-white mb-0">Edição do Doador</h3>
+                            <p class="text-white opacity-8 mb-0">Se a senha ficar em branco a senha antiga prevalecerá!</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-5">
+                        @if (Model.sucesso != null)
+                        {
+                            <div class="alert alert-success text-black text-center text-bolder">@Model.sucesso</div>
+                        }
+                        <form asp-controller="CadastroUsuario" asp-action="Editar" method="post">
+                            <div class="row">
+                                <input type="hidden" asp-for="id">
+                                <div class="col-md-4">
+                                    <div class="input-group input-group-static">
+                                        <label>Nome</label>
+                                        <input class="form-control" type="text" asp-for="nome">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group input-group-static">
+                                        <label>Email</label>
+                                        <input class="form-control" type="email" asp-for="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group input-group-static">
+                                        <label>Password</label>
+                                        <input class="form-control" type="password" asp-for="senha">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-end">
+                                    <button type="submit" class="btn bg-gradient-primary btn-behance mt-3 mb-0">Salvar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input type="password" asp-for="senha" class="form-control" id="exampleInputPassword1">
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Editar</button>
-        <a class="btn btn-secondary btn-block" asp-controller="Login" asp-action="Index" role="button">Voltar</a>
-    </form>
+    </div>
+</section>

@@ -6,4 +6,5 @@ dotnet tool install --global dotnet-ef --version 5.0.17
 dotnet ef migrations add Migration5 --context BancoContext
 dotnet ef database update --context BancoContext
 
+
 dotnet run

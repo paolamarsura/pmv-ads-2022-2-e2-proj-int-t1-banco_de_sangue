@@ -19,29 +19,39 @@ namespace BancoDeSangue.Repositorio
 
         public List<UsuarioModel> BuscarTodos()
         {
-            return _bancoContext.Usuarios.ToList();
+            return _bancoContext.Usuarios.OrderBy(x => x.nome).ToList();
         }
 
-        public bool temADM()
-        {            
-            var usuarioResposta = _bancoContext.Usuarios.Where(x => x.perfil.Equals(ADM));
-            return usuarioResposta != null;
-        }
 
-        public UsuarioModel CriarADM()
+        public UsuarioModel BuscarUsuario(int id)
         {
-            var usuario = new UsuarioModel();
-            usuario.nome= "Administrador";
-            usuario.email = "adm@adm.com";
-            usuario.senha = "etapa2";
-            usuario.perfil= ADM;
-            usuario.criacao = DateTime.Now;
-
-            usuario.SetSenhaHash(usuario);
-
-            _bancoContext.Usuarios.Add(usuario);
-            _bancoContext.SaveChanges();
+            UsuarioModel usuario = _bancoContext.Usuarios.Where(x => x.id == id).FirstOrDefault();
             return usuario;
+        }
+
+        public UsuarioModel BuscarUsuarioPorEmail(string email)
+        {
+            UsuarioModel usuario = _bancoContext.Usuarios.Where(x => x.email == email).FirstOrDefault();
+            return usuario;
+        }
+
+        public void CriarADM()
+        {
+            var usuarioResposta = _bancoContext.Usuarios.Where(x => x.perfil.Equals(ADM)).FirstOrDefault();
+
+            if (usuarioResposta == null) {
+                var usuario = new UsuarioModel();
+                usuario.nome = "Administrador";
+                usuario.email = "adm@adm.com";
+                usuario.senha = "etapa2";
+                usuario.perfil = ADM;
+                usuario.criacao = DateTime.Now;
+
+                usuario.SetSenhaHash(usuario);
+
+                _bancoContext.Usuarios.Add(usuario);
+                _bancoContext.SaveChanges();
+            }            
         }
 
         public UsuarioModel Adicionar(UsuarioModel usuario)
@@ -52,6 +62,13 @@ namespace BancoDeSangue.Repositorio
             return usuario; 
         }
 
-      
+        public UsuarioModel Atualizar(UsuarioModel usuario)
+        {
+            _bancoContext.Usuarios.Update(usuario);
+            _bancoContext.SaveChanges();
+            return usuario;
+        }
+
+
     }
 }

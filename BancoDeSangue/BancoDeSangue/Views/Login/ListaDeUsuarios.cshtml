@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BancoDeSangue.Models.UsuarioModel>
 
 @{
-    ViewData["Title"] = "ListaDeUsuarios";
+    ViewData["Title"] = "Lista de Usuários";
 }
 
 <section class="pt-3 pt-md-5 pb-md-5 pt-lg-8 bg-gray-200">
@@ -90,13 +90,13 @@
                                                 <a class="text-secondary font-weight-bold text-xs" asp-controller="CadastroUsuario" asp-action="Editar" asp-route-id="@item.id">
                                                     Editar
                                                 </a>
-                                                
                                                 @if (item.perfil != "ADMIN")
                                                 {
+                                                    <span class="ml-2 mr-2">|</span>
                                                     <a class="text-secondary font-weight-bold text-xs" asp-controller="CadastroUsuario" asp-action="Apagar" asp-route-id="@item.id">
                                                         Apagar
                                                     </a>
-                                                }                                                
+                                                }
                                             </td>
                                         </tr>
                                     }
@@ -109,3 +109,12 @@
         </div>
     </div>
 </section>
+
+<script>
+    function excluir(id) {
+        var resultado = confirm("Deseja realmente excluir o usuário?");
+        if (resultado == true) {
+
+        }
+    }    
+</script>
