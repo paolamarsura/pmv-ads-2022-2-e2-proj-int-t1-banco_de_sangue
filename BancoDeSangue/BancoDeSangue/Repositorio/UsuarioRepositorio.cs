@@ -62,6 +62,12 @@ namespace BancoDeSangue.Repositorio
             return usuario; 
         }
 
+        public void Remover(UsuarioModel usuario)
+        {
+            _bancoContext.Usuarios.Remove(usuario);
+            _bancoContext.SaveChanges();            
+        }
+
         public UsuarioModel Atualizar(UsuarioModel usuario)
         {
             _bancoContext.Usuarios.Update(usuario);

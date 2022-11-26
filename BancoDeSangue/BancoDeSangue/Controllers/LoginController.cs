@@ -66,10 +66,13 @@ namespace BancoDeSangue.Controllers
         }
 
         // GET: LoginS
-        public async Task<IActionResult> ListaDeUsuarios()
+        public async Task<IActionResult> ListaDeUsuarios([FromQuery(Name = "sucesso")] string sucesso)
         {
-            var teste = await _context.Usuarios.ToListAsync();
-            return View("ListaDeUsuarios", teste);
+            ListaUsuarioModel resultado = new ListaUsuarioModel();
+            resultado.usuarios = await _context.Usuarios.ToListAsync();
+            resultado.sucesso = sucesso;
+
+            return View("ListaDeUsuarios", resultado);
         }
     }
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BancoDeSangue.Models.UsuarioModel>
+﻿@model ListaUsuarioModel
 
 @{
     ViewData["Title"] = "Lista de Usuários";
@@ -52,7 +52,12 @@
                             <p class="text-white opacity-8 mb-0">Todos os usuários estão aqui!</p>
                         </div>
                     </div>
+                   
                     <div class="card-body p-5">
+                        @if (Model.sucesso != null)
+                        {
+                            <div class="alert alert-success text-black text-center text-bolder">@Model.sucesso</div>
+                        }
                         <div class="table-responsive">
                             <table class="table align-items-center mb-0">
                                 <thead>
@@ -64,7 +69,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.usuarios)
                                     {
                                         <tr>
                                             <td>
@@ -79,9 +84,11 @@
                                                 @if (item.perfil == "ADMIN")
                                                 {
                                                     <span class="badge badge-sm badge-danger">ADMIN</span>
-                                                } else {
+                                                }
+                                                else
+                                                {
                                                     <span class="badge badge-sm badge-success">USUÁRIO</span>
-                                                }                                                
+                                                }
                                             </td>
                                             <td class="align-middle text-center">
                                                 <span class="text-secondary text-xs font-weight-bold">@Html.DisplayFor(modelItem => item.criacao)</span>
@@ -93,7 +100,7 @@
                                                 @if (item.perfil != "ADMIN")
                                                 {
                                                     <span class="ml-2 mr-2">|</span>
-                                                    <a class="text-secondary font-weight-bold text-xs" asp-controller="CadastroUsuario" asp-action="Apagar" asp-route-id="@item.id">
+                                                    <a class="text-secondary font-weight-bold text-xs" onclick="excluir(@item.id)">
                                                         Apagar
                                                     </a>
                                                 }
@@ -114,7 +121,7 @@
     function excluir(id) {
         var resultado = confirm("Deseja realmente excluir o usuário?");
         if (resultado == true) {
-
+            window.location.replace("/CadastroUsuario/Apagar/" + id);            
         }
     }    
 </script>
