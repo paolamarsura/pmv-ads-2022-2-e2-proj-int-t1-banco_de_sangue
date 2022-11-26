@@ -78,9 +78,18 @@ namespace BancoDeSangue.Controllers
             return View(usuarioBD);
         }
 
-        public IActionResult Apagar()
+        [HttpGet]
+        public IActionResult Apagar(int id)
         {
-            return View();
+            UsuarioModel usuarioBD = _usuarioRepositorio.BuscarUsuario(id);
+            if (usuarioBD == null)
+            {
+                return NotFound();
+            }
+
+            _usuarioRepositorio.Remover(usuarioBD);
+            string sucesso = "O usuário " + usuarioBD.nome + " foi removido com sucesso!";
+            return RedirectToAction("ListaDeUsuarios", "Login", new { sucesso = sucesso });
         }
 
         [HttpPost]
