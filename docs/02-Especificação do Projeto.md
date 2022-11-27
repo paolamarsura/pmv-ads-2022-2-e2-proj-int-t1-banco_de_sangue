@@ -4,7 +4,7 @@ A definição exata do problema e os pontos mais relevantes a serem tratados nes
 
 ## Personas
 
-As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem. 
+As personas levantadas durante o processo de entendimento do problema são apresentadas na tabela abaixo: 
 
 |Persona  | Descritivo  | Aplicativos | Motivações |Frustações |Hobies |
 |---------|-------------|-------------|------------|-----------|-------|
@@ -12,17 +12,19 @@ As personas levantadas durante o processo de entendimento do problema são apres
 |![jair](https://user-images.githubusercontent.com/103156976/204135386-e5a7b878-e007-4b8d-a04a-0cbaba2f4507.PNG) Jair Junio da Silva | Idade 43 anos; Ocupação: Engenheiro Mecânico, funcionário de uma multinacional do setor da indústria automotiva. |Instagram, LinkedIn, aplicativos de bancos e GitHub. | Criar meio de comunicação digital que alcance a população em geral para que todos dentro da exigência mínima de saúde, se torne um potencial doador de sangue. | Ver que ainda há tabus por desinformação sobre a doação de sangue. | Inovação, tecnologia, esportes, viajar e cinema.
 |![roberto](https://user-images.githubusercontent.com/103156976/204135391-6693023a-3590-4904-a204-192527dcd13a.PNG) Roberto Arimuja| Idade: 36 anos; Ocupação: Engenheiro de Software, trabalha em uma empresa da área financeira. | LinkedIn, TikTok, aplicativos de bancos e GitHub. | Desde quando sua prima foi diagnosticada com leucemia, aumentou o desejo de resolver o problema para divulgar para o máximo de pessoas os benefícios da doação de sangue. |Ser incompatível sanguíneo com sua prima. | Inovação, tecnologia, jiu-jitsu, seriados e caminhar.
 
-
-
-
-
-
-
 ## Histórias de Usuários
 
-A partir da compreensão do dia a dia das personas identificadas para o projeto, foram registradas as seguintes histórias de usuários. 
-
-![image](https://user-images.githubusercontent.com/103156976/188490096-f3c40f35-1460-4512-ac13-d02a754e8b20.png)
+|Eu como...[PERSONA]  | ...quero/desejo...[O QUE] | ...para...[POR QUE]... | 
+|---------------------|---------------------------|------------------------|
+|Paola Marsura | Quero mostrar a população brasileira que é possível ser doador sem riscos para saúde | Aumentar o número de potenciais doares de sangue no Brasil. |
+|Paola Marsura | Aumentar cultura de doação de sangue no Brasil  | Minimizar os efeitos da escassez de sangue no Brasil |
+|Paola Marsura | Queria doar sangue e não sabia onde efetuar a doação | Para ajudar um familiar que precisava de sangue |
+|Paola Marsura | Precisei de doação de sangue para um familiar. Não sabia onde procurar | Por questões de saúde |
+|Jair Junio | Queria saber se posso ser doador de sangue, antes da doação | Para evitar deslocamento desnecessário |
+|Jair Junio | Queria saber se posso doar sangue novamente.  | Para fazer uma nova doação. |
+|Jair Junio | O banco de sangue da instituição de saúde da minha região está com estoque baixo. | Poucos doadores. |
+|Roberto Arimuja | Usar o poder das redes sociais para atrair a atenção de novos doadores ou conseguir novos ativistas na área de doação | Quanto mais pessoas no processo, mais a possibilidade de aumentar doadores. |
+|Roberto Arimuja | Saber quem precisa do meu tipo sanguíneo e qual o lugar para doar para me integrar mais do caso da pessoa que vou doar | Assim crio um laço de relacionamento com as pessoas que precisam do meu sangue.|
 
 ## Requisitos
 
@@ -48,14 +50,26 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
 
-![requisitosnaofuncionaistabela](https://user-images.githubusercontent.com/101051620/189016056-0a9c1a7b-7431-427a-bb30-7fc36f47f4bf.JPG)
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RNF-01| A aplicação deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku); | Alta |
+|RNF-02| A aplicação deverá ser responsivo permitindo a visualização em um celular de forma adequada | Média |
+|RNF-03| A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade  | Média |
+|RNF-04| A aplicação deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) | Alta |
+|RNF-05| O servidor da aplicação deve atender altas demandas de acesso no mínimo 1000 requisições por minuto | Alta |
 
 
 ## Restrições
 
 As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
-![restricoestabela (1)](https://user-images.githubusercontent.com/101051620/189016265-19af5892-6e66-400b-8438-2b6605ab243e.JPG)
+|ID    | Descrição | 
+|------|-----------|
+|RE-01 |O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 11/12/2022. 
+|RE-02 |O site deve se restringir a programação com a linguagem C# para back-end. Devendo utilizar Framework ASP.NET Core MVC. |
+|RE-03 |O site deve utilizar como Sistema de Gerenciamento de Banco de Dados (SGBD) um sistema compatível com o ambiente de desenvolvimento e publicação.  |
+|RE-04 |A equipe não pode subcontratar o desenvolvimento do trabalho. |
+|RE-05 |O site deve obedecer a LGPD Brasileira para compartilhamento e armazenamento de dados sensíveis. |
 
 
 ## Diagrama de Casos de Uso
