@@ -1,15 +1,23 @@
 
 # Metodologia
 
- O desenvolvimento deste projeto, originou-se da observação da escassez de sangue no Brasil trabalhando por sua vez a limitação que o brasileiro encontra no acesso aos canais tradicionais de informação sobre o tema.
+O desenvolvimento deste projeto, originou-se da observação da escassez de sangue no Brasil trabalhando por sua vez a limitação que o brasileiro encontra no acesso aos canais tradicionais de informação sobre o tema.
  
- Serão feitas reuniões entre a equipe de forma on-line na ferramenta Teams, através de conversas pelo aplicativo WhatsApp, durante este trabalho, será usada a metodologia Scrum de desenvolvimento ágil, dividindo esforço de entrega em sprints de 1 semana. 
+Serão feitas reuniões entre a equipe de forma on-line na ferramenta Teams, através de conversas pelo aplicativo WhatsApp, durante este trabalho, será usada a metodologia Scrum de desenvolvimento ágil, dividindo esforço de entrega em sprints de 1 semana. 
 
 ## Relação de ambientes de trabalho
 
 Os artefatos do projeto serão desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
-![image](https://user-images.githubusercontent.com/103156976/193322810-2792be2a-6968-4a55-ac55-a5ef07e36e63.png)
+|Ambiente | Plataforma  | Endereço |
+|---------|-------------|-------------|
+|Repositório de código fonte| GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue |
+|Ferramenta para controle de versão| Git | https://git-scm.com/ |
+|Documentos do projeto| GitHub |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue/blob/main/docs/01-Documenta%C3%A7%C3%A3o%20de%20Contexto.md |
+|Projeto de interface e Wireframes| Canva | https://sgapucminasbr-my.sharepoint.com/:i:/g/personal/1408097_sga_pucminas_br/Ec0stXKnxoJOhVsNzRq4LYoBAhGv1euXFgMA5CrCZq-8Bw?e=tpEkKE |
+|Gerenciamento do projeto| Trello | https://trello.com/b/KRFCKLn0/grupo-1-turma-1-eixo-2-ads-2022 |
+|Editor de código| Visual Studio Comunity 2019 | https://portal.azure.com/?Microsoft_Azure_Education_correlationId=482c7b3fd428421ebc975fb5a28dcb48#view/Microsoft_Azure_Education/EducationMenuBlade/~/software |
+|Banco de dados| SQL Server Management Studio 2018 | https://docs.docker.com/desktop/install/windows-install/ |
 
 ### Ferramentas
 
