@@ -13,10 +13,11 @@ namespace BancoDeSangue.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    cidade = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    endereco = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    telefone = table.Column<int>(type: "int", nullable: false)
+                    nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    telefone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    endereco = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    link = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    criacao = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -1,26 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BancoDeSangue.Models
 {
     public class InstituicaoModel
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
+        [Required]
         public String nome { get; set; }
-        
-        public String cidade { get; set; }
 
+        [Required]
+        public String telefone{ get; set; }
+
+        [Required]
         public String endereco { get; set; }
 
-        public int telefone { get; set; }
+        [Required]
+        public String link{ get; set; }
 
-        
+        public DateTime criacao { get; set; }
+
+        [NotMapped]
+        public String erro{ get; set; }
+
+
     }
 }

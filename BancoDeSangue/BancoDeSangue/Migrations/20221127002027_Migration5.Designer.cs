@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BancoDeSangue.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20221126023754_Migration5")]
+    [Migration("20221127002027_Migration5")]
     partial class Migration5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,17 +28,24 @@ namespace BancoDeSangue.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("cidade")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("criacao")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("endereco")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("link")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("telefone")
-                        .HasColumnType("int");
+                    b.Property<string>("telefone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 

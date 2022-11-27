@@ -26,17 +26,24 @@ namespace BancoDeSangue.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("cidade")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("criacao")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("endereco")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("link")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("telefone")
-                        .HasColumnType("int");
+                    b.Property<string>("telefone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
