@@ -4,7 +4,7 @@ ANÁLISE E DESENVOLVIMENTO DE SISTEMAS - PUC MINAS
 
 Eixo 2 - Projeto: Desenvolvimento de uma Aplicação Interativa - Turma 01 - Grupo 01 - 2022/2
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Esta aplicação tem como objetivo promover a conscientização sobre a doação de sangue e ser um facilitador entre as instituições de banco de sangue de Minas Gerais e o potencial doador. Ao acessar a aplicação o usuário terá acesso a um formulário de requisitos que após ser respondido retornará para o usuário se o mesmo encontra-se apto, inapto ou inapto temporariamente para a doação de sangue. A aplicação também apresenta ao usuário a lista das instituições de banco de sangue cadastradas no estado de Minas Gerais.
 
 ## Integrantes
 
@@ -26,7 +26,7 @@ Faça o download do repositório para a sua máquina, abra ele com o Visual Stud
 
 Você pode acessar as credenciais de acesso ao nosso banco de dados no arquivo appsettings.json do repositório. Caso você tenha dúvidas o [Tutorial](https://www.youtube.com/watch?v=Lgh8JgcYFwM/) pode te ajudar.
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+A aplicação esta disponível para acesso através deste link (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
 
 Para testar as funcionalidades com o usuário admin você deve utilizar no login admin@admin.com senha: etapa 3 
 
