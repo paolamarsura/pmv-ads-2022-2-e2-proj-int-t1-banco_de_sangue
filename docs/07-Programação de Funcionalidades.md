@@ -8,13 +8,13 @@ Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos 
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| A aplicação deve ter cadastro de usuário com login e senha | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-002| A aplicação deve permitir o cadastro da pessoa física doadora | relatorio.shtml |
-|RF-003| A aplicação deve gerar um formulário com os requisitos básicos para triar o potencial doador | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-004| A aplicação deve oferecer ao usuário um listagem de bancos de sangue existentes no seu estado   | relatorio.shtml |
-|RF-005| A aplicação deve notificar por e-mail o usuário que esta inapto ou inapto temporariamente para doar sangue. | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-006| A aplicação deve oferecer a opção de compartilhamento do endereço do portal para todos o usuários a fim de disseminar informação   | relatorio.shtml |
-|RF-007| A aplicação deve permitir o compartilhamento da aptidão de doação nas plataformas de mídias sociais | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-001| A aplicação deve ter cadastro de usuário com login e senha | LoginController.cs / CadastroUsuarioController.cs / UsuarioModel.cs / IUsuarioRepositorio.cs / UsuarioRepositorio.cs / Login: Index.cshtml / ListaDeUsuarios.cshtml | 
+|RF-002| A aplicação deve permitir o cadastro da pessoa física doadora | CadastroUsuarioController.cs / UsuarioModel.cs / IUsuarioRepositorio.cs / UsuarioRepositorio.cs / CadastroUsuario: Apagar.cshtml Criar.cshtml Editar.cshtml |
+|RF-003| A aplicação deve gerar um formulário com os requisitos básicos para triar o potencial doador | FormularioController.cs / FormularioModel.cs / IFormularioRepositorio.cs / FormularioRepositorio.cs| 
+|RF-004| A aplicação deve oferecer ao usuário um listagem de bancos de sangue existentes no seu estado   | InstituicaoController.cs / InstitiuicaoModel.cs / IInstituicaoRepositorio.cs / InstituicaoRepositorio.cs / Instituicao: InstituicoesEndereco.cshtml / ListaDeInstituicao.cshtml |
+|RF-005| A aplicação deve notificar por e-mail o usuário que esta inapto ou inapto temporariamente para doar sangue. | FormularioController.cs / FormularioModel.cs / IFormularioRepositorio.cs / FormularioRepositorio.cs| 
+|RF-006| A aplicação deve oferecer a opção de compartilhamento do endereço do portal para todos o usuários a fim de disseminar informação   | Shared: _Layout.cshtml / HomeController.cs / Home: Index.csthml |
+|RF-007| A aplicação deve permitir o compartilhamento da aptidão de doação nas plataformas de mídias sociais | Shared: _Layout.cshtml / HomeController.cs / Home: Index.csthml  | 
 
 
 # Instruções de acesso
