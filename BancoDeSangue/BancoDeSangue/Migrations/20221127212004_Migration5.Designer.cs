@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BancoDeSangue.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20221127014458_Migration5")]
+    [Migration("20221127212004_Migration5")]
     partial class Migration5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -87,6 +87,9 @@ namespace BancoDeSangue.Migrations
 
                     b.Property<bool>("tattoo")
                         .HasColumnType("bit");
+
+                    b.Property<int>("usuarioId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("vacina")
                         .HasColumnType("bit");

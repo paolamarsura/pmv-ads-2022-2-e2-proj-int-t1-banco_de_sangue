@@ -86,6 +86,9 @@ namespace BancoDeSangue.Migrations
                     b.Property<bool>("tattoo")
                         .HasColumnType("bit");
 
+                    b.Property<int>("usuarioId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("vacina")
                         .HasColumnType("bit");
 

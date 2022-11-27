@@ -8,6 +8,8 @@ namespace BancoDeSangue.Repositorio
 {
     public interface IFormularioRepositorio
     {
-        FormularioModel Adicionar(FormularioModel formularioModel); 
+        FormularioModel Adicionar(FormularioModel formularioModel);
+        FormularioModel Atualizar(FormularioModel formularioModel);
+        FormularioModel BuscarFormularioPorUsuario(UsuarioModel usuario);
     }
 }

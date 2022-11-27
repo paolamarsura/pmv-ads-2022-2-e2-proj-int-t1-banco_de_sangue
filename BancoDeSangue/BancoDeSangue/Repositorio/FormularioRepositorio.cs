@@ -23,5 +23,18 @@ namespace BancoDeSangue.Repositorio
             _bancoContext.SaveChanges();
             return formularioModel;
         }
+
+        public FormularioModel Atualizar(FormularioModel formularioModel)
+        {            
+            _bancoContext.Formulario.Update(formularioModel);
+            _bancoContext.SaveChanges();
+            return formularioModel;
+        }
+
+        public FormularioModel BuscarFormularioPorUsuario(UsuarioModel usuario)
+        {
+            FormularioModel formulario = _bancoContext.Formulario.Where(x => x.usuarioId == usuario.id).FirstOrDefault();
+            return formulario;
+        }
     }
 }

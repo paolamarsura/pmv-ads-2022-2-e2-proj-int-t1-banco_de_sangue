@@ -33,7 +33,8 @@ namespace BancoDeSangue.Migrations
                     parkinson = table.Column<bool>(type: "bit", nullable: false),
                     hiv = table.Column<bool>(type: "bit", nullable: false),
                     hepatite = table.Column<bool>(type: "bit", nullable: false),
-                    criacao = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    criacao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    usuarioId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

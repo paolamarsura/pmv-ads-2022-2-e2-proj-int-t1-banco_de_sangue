@@ -56,5 +56,8 @@ namespace BancoDeSangue.Models
 
         public DateTime criacao { get; set; }
 
+        [Required]
+        public int usuarioId { get; set; }
+
     }
 }
