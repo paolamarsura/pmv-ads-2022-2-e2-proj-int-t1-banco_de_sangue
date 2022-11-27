@@ -3,7 +3,6 @@ using BancoDeSangue.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace BancoDeSangue.Repositorio
 {
@@ -21,7 +20,6 @@ namespace BancoDeSangue.Repositorio
         {
             return _bancoContext.Usuarios.OrderBy(x => x.nome).ToList();
         }
-
 
         public UsuarioModel BuscarUsuario(int id)
         {

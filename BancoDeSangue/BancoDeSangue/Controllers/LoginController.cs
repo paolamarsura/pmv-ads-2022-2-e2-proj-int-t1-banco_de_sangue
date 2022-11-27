@@ -1,22 +1,24 @@
 ﻿using BancoDeSangue.Data;
 using BancoDeSangue.Models;
+using BancoDeSangue.Repositorio;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace BancoDeSangue.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : AbstractController
     {
 
         private readonly BancoContext _context;
 
-        public LoginController(BancoContext context)
+        public LoginController(BancoContext context, IUsuarioRepositorio usuarioRepo)
         {
             _context = context;
+            _usuarioRepositorio = usuarioRepo;
         }
 
 
@@ -37,36 +39,41 @@ namespace BancoDeSangue.Controllers
             {
                 usuario.erro = "Usuário não existe!";
                 return View("Index", usuario);
-            }            
+            }
+
+            //definindo a sessão
+            HttpContext.Session.SetString("userId", usuarioResposta.id.ToString());
 
             if (!usuarioResposta.senha.Equals(usuario.senha))
             {
                 usuario.erro = "Usuário e senha inválido!";
                 return View("Index", usuario);
             }
-
-            if (String.IsNullOrWhiteSpace(usuarioResposta.perfil)) {
-                return RedirectToAction("Index", "Formulario");
-            }
-
-            if (usuarioResposta.perfil.Equals("ADMIN"))
+            
+            if (usuarioResposta.perfil == "ADMIN")
             {
                 return RedirectToAction("ListaDeUsuarios", "Login");
             }
 
-            usuario.erro = "Favor entrar em contato com o suporte técnico!";
-            return View("Index", usuario);
+            return RedirectToAction("Index", "Formulario");
 
         }
 
         public IActionResult Index()
         {
+            HttpContext.Session.Remove("userId");
             var usuario = new UsuarioModel();
             return View(usuario);
         }
         
         public async Task<IActionResult> ListaDeUsuarios([FromQuery(Name = "sucesso")] string sucesso)
         {
+            UsuarioModel usuarioLogado = this.usuarioLogado("ADMIN");
+            if (usuarioLogado == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
             ListaUsuarioModel resultado = new ListaUsuarioModel();
             resultado.usuarios = await _context.Usuarios.ToListAsync();
             resultado.sucesso = sucesso;

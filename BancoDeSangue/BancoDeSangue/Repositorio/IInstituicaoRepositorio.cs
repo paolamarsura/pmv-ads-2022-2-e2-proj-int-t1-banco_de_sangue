@@ -9,8 +9,13 @@ namespace BancoDeSangue.Repositorio
     public interface IInstituicaoRepositorio
     {
         List<InstituicaoModel> BuscarTodos();
-        InstituicaoModel Adicionar(InstituicaoModel instituicaoModel);
+        InstituicaoModel BuscarInstituicao(int id);
+
+        InstituicaoModel Adicionar(InstituicaoModel instituicao);
         InstituicaoModel InstituicaoPorNome(string nome);
+
+        InstituicaoModel Atualizar(InstituicaoModel instituicao);
+        void Remover(InstituicaoModel instituicao);
     }
 }
 

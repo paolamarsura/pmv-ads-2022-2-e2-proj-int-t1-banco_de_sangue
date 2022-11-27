@@ -22,7 +22,7 @@ namespace BancoDeSangue.Repositorio
             _bancoContext.Instituicoes.Add(instituicao);
             _bancoContext.SaveChanges();
             return instituicao;
-        }
+        }        
 
         public InstituicaoModel InstituicaoPorNome(string nome)
         {
@@ -34,6 +34,26 @@ namespace BancoDeSangue.Repositorio
         public List<InstituicaoModel> BuscarTodos()
         {
             return _bancoContext.Instituicoes.ToList();
+        }
+
+        public InstituicaoModel BuscarInstituicao(int id)
+        {
+            InstituicaoModel instituicao = _bancoContext.Instituicoes.Where(x => x.id == id).FirstOrDefault();
+            return instituicao;
+        }
+
+        public InstituicaoModel Atualizar(InstituicaoModel instituicao)
+        {
+            _bancoContext.Instituicoes.Update(instituicao);
+            _bancoContext.SaveChanges();
+            return instituicao;
+        }
+
+
+        public void Remover(InstituicaoModel instituicao)
+        {
+            _bancoContext.Instituicoes.Remove(instituicao);
+            _bancoContext.SaveChanges();
         }
     }
 }

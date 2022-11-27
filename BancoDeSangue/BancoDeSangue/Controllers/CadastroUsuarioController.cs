@@ -1,5 +1,6 @@
 ﻿using BancoDeSangue.Models;
 using BancoDeSangue.Repositorio;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace BancoDeSangue.Controllers
 {
-    public class CadastroUsuarioController : Controller
-    {
-        private readonly IUsuarioRepositorio _usuarioRepositorio;
+    public class CadastroUsuarioController : AbstractController
+    {        
 
         public CadastroUsuarioController(IUsuarioRepositorio usuarioRepositorio)
         {
@@ -19,6 +19,12 @@ namespace BancoDeSangue.Controllers
 
         public IActionResult Index()
         {
+            UsuarioModel usuarioLogado = this.usuarioLogado("ADMIN");
+            if (usuarioLogado == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
             List<UsuarioModel> usuario = _usuarioRepositorio.BuscarTodos();
             return View(usuario);
         }
@@ -32,17 +38,44 @@ namespace BancoDeSangue.Controllers
         [HttpGet]
         public IActionResult Editar(int id)
         {
+            UsuarioModel usuarioLogado = this.usuarioLogado("ADMIN");
+            if (usuarioLogado == null) {
+                return RedirectToAction("Index", "Login");
+            }
+
             UsuarioModel usuario = _usuarioRepositorio.BuscarUsuario(id);
-            if (usuario == null) {
+            if (usuario == null)
+            {
                 return NotFound();
             }
-            
+
             return View(usuario);
         }
+
+        [HttpGet]
+        public IActionResult Perfil()
+        {
+            UsuarioModel usuarioLogado = this.usuarioLogado();
+
+            if (usuarioLogado == null)
+            {
+                return RedirectToAction("Index", "Login", usuarioLogado);
+            }
+
+            return View("Editar", usuarioLogado);
+        }
+
+        
 
         [HttpPost]
         public IActionResult Editar(UsuarioModel usuario)
         {
+            UsuarioModel usuarioLogado = this.usuarioLogado();
+            if (usuarioLogado == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
             if (String.IsNullOrWhiteSpace(usuario.nome))
             {
                 usuario.erro = "Preencha o Nome!";
@@ -81,6 +114,13 @@ namespace BancoDeSangue.Controllers
         [HttpGet]
         public IActionResult Apagar(int id)
         {
+
+            UsuarioModel usuarioLogado = this.usuarioLogado("ADMIN");
+            if (usuarioLogado == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
             UsuarioModel usuarioBD = _usuarioRepositorio.BuscarUsuario(id);
             if (usuarioBD == null)
             {
@@ -95,7 +135,6 @@ namespace BancoDeSangue.Controllers
         [HttpPost]
         public IActionResult Criar(UsuarioModel usuario)
         {
-
             if (String.IsNullOrWhiteSpace(usuario.email))
             {
                 usuario.erro = "Preencha o Email!";
@@ -123,7 +162,8 @@ namespace BancoDeSangue.Controllers
             _usuarioRepositorio.CriarADM();            
 
             usuario.SetSenhaHash(usuario);
-            _usuarioRepositorio.Adicionar(usuario);
+            UsuarioModel usuarioCriado = _usuarioRepositorio.Adicionar(usuario);
+            HttpContext.Session.SetString("userId", usuarioCriado.id.ToString());
 
             return RedirectToAction("Index", "Formulario");
         }        

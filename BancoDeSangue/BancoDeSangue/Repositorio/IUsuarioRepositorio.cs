@@ -13,9 +13,8 @@ namespace BancoDeSangue.Repositorio
         UsuarioModel Adicionar(UsuarioModel usuarioModel);
         UsuarioModel Atualizar(UsuarioModel usuarioModel);
         void Remover(UsuarioModel usuarioModel);
-        void CriarADM();
-        
         UsuarioModel BuscarUsuario(int id);
+        void CriarADM();
         
         UsuarioModel BuscarUsuarioPorEmail(string email);
     }

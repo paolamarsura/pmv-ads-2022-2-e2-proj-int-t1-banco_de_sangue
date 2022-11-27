@@ -8,40 +8,68 @@
     <div class="container">
         <div class="row">
             <!--MENU LATERAL-->
-            <div class="col-lg-3 mb-lg-0 mb-5 mt-8 mt-md-5 mt-lg-0">
-                <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-10 shadow-lg">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Login/ListaDeUsuarios">
-                            <i class="material-icons text-dark opacity-5 pe-2">widgets</i>
-                            Formulários
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Login/ListaDeUsuarios">
-                            <i class="material-icons text-dark opacity-5 pe-2">cookie</i>
-                            Usuários
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Instituicao/ListaDeInstituicao">
-                            <i class="material-icons text-dark opacity-5 pe-2">description</i>
-                            Instituições
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="#hyperlinking">
-                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
-                            Perfil
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/login">
-                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
-                            Sair
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            @if (ViewBag.perfil == "ADMIN")
+            {
+                <div class="col-lg-3 mb-lg-0 mb-5 mt-8 mt-md-5 mt-lg-0">
+                    <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-10 shadow-lg">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Formulario/lista">
+                                <i class="material-icons text-dark opacity-5 pe-2">widgets</i>
+                                Formulários
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Login/ListaDeUsuarios">
+                                <i class="material-icons text-dark opacity-5 pe-2">cookie</i>
+                                Usuários
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Instituicao/ListaDeInstituicao">
+                                <i class="material-icons text-dark opacity-5 pe-2">description</i>
+                                Instituições
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/CadastroUsuario/Perfil">
+                                <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                                Perfil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/login">
+                                <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                                Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            }
+            else
+            {
+                <div class="col-lg-3 mb-lg-0 mb-5 mt-8 mt-md-5 mt-lg-0">
+                    <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-10 shadow-lg">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/formulario">
+                                <i class="material-icons text-dark opacity-5 pe-2">widgets</i>
+                                Formulário do Doador
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/CadastroUsuario/Perfil">
+                                <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                                Perfil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/login">
+                                <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                                Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            }
 
             <!--TELA EDICAO INSTITUIÇÃO -->
             <div class="col-lg-9">
@@ -57,6 +85,7 @@
                         {
                             <div class="alert alert-danger text-black text-center text-bolder">@Model.erro</div>
                         }
+
                         <form asp-controller="Instituicao" asp-action="Cadastrar" method="post">
                             <div class="row">
                                 <div class="col-md-6">
