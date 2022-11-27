@@ -47,19 +47,19 @@
                                         <div class="col-md-6">
                                             <div class="input-group input-group-static">
                                                 <label>Data de Nascimento</label>
-                                                <input type="date" class="form-control" placeholder="28/08/1986">
+                                                <input type="date" class="form-control" placeholder="28/08/1986" asp-for="idade">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input-group input-group-static mb-4">
                                                 <label>Peso em KG</label>
-                                                <input class="form-control" type="number" min="0" step="0.10">
+                                                <input class="form-control" type="number" min="0" step="0.10" asp-for="peso">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input-group input-group-static mb-4">
                                                 <label>Sexo</label>
-                                                <select class="form-control">
+                                                <select class="form-control" asp-for="sexo">
                                                     <option>Masculino</option>
                                                     <option>Feminino</option>
                                                 </select>
@@ -68,7 +68,7 @@
                                         <div class="col-md-6">
                                             <div class="input-group input-group-static">
                                                 <label>Você já doou sangue? Informe a data que fez</label>
-                                                <input type="date" class="form-control" placeholder="22/11/2022">
+                                                <input type="date" class="form-control" placeholder="22/11/2022" asp-for="doacaoAnt">
                                             </div>
                                         </div>
                                     </div>
