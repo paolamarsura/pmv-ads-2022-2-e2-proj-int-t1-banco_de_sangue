@@ -6,9 +6,17 @@ A definição exata do problema e os pontos mais relevantes a serem tratados nes
 
 As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem. 
 
-![image](https://user-images.githubusercontent.com/103156976/188489780-09439979-0fd9-421f-ab1c-bdd3c9f2bdd4.png)
-![image](https://user-images.githubusercontent.com/103156976/188489862-4409976c-9623-45dc-a9b3-e277ca83a627.png)
-![image](https://user-images.githubusercontent.com/103156976/188489999-911e3b69-256e-477b-9359-3c91ccc99c4d.png)
+|Persona  | Descritivo  | Aplicativos | Motivações |Frustações |Hobies |
+|---------|-------------|-------------|------------|-----------|-------|
+|![paola](https://user-images.githubusercontent.com/103156976/204135284-b9866dcd-90ae-4c61-b06f-af62ff702646.PNG)Paola Marsura| Idade: 29 anos;Ocupação: enfermeira intensivista, vivenciou as consequências da escassez de sangue no Brasil durante a pandemia.| Instagram, linkedIn| Disseminar informações sobre a doação de sangue e capacitar o potencial doador da decisão de doar. | Ver a não doação de sangue por falta de informação e saber que possíveis doadores não realizam doação por medo de contaminação | Viajar, estudar tecnologia e pets.
+|![jair](https://user-images.githubusercontent.com/103156976/204135386-e5a7b878-e007-4b8d-a04a-0cbaba2f4507.PNG) Jair Junio da Silva | Idade 43 anos; Ocupação: Engenheiro Mecânico, funcionário de uma multinacional do setor da indústria automotiva. |Instagram, LinkedIn, aplicativos de bancos e GitHub. | Criar meio de comunicação digital que alcance a população em geral para que todos dentro da exigência mínima de saúde, se torne um potencial doador de sangue. | Ver que ainda há tabus por desinformação sobre a doação de sangue. | Inovação, tecnologia, esportes, viajar e cinema.
+|![roberto](https://user-images.githubusercontent.com/103156976/204135391-6693023a-3590-4904-a204-192527dcd13a.PNG) Roberto Arimuja| Idade: 36 anos; Ocupação: Engenheiro de Software, trabalha em uma empresa da área financeira. | LinkedIn, TikTok, aplicativos de bancos e GitHub. | Desde quando sua prima foi diagnosticada com leucemia, aumentou o desejo de resolver o problema para divulgar para o máximo de pessoas os benefícios da doação de sangue. |Ser incompatível sanguíneo com sua prima. | Inovação, tecnologia, jiu-jitsu, seriados e caminhar.
+
+
+
+
+
+
 
 ## Histórias de Usuários
 
@@ -26,7 +34,15 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 
 
-![requisitosfuncionaistabela (1)](https://user-images.githubusercontent.com/101051620/189015949-7a4d6a58-f2c9-4ff9-8c5c-bc2d7602abcc.JPG)
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RF-001| A aplicação deve ter cadastro de usuário com login e senha |Alta | 
+|RF-002| A aplicação deve permitir o cadastro da pessoa física doadora | Alta |
+|RF-003| A aplicação deve gerar um formulário com os requisitos básicos para triar o potencial doador | Alta | 
+|RF-004| A aplicação deve oferecer ao usuário um listagem de bancos de sangue existentes no seu estado   | Alta |
+|RF-005| A aplicação deve notificar por e-mail o usuário que esta inapto ou inapto temporariamente para doar sangue. | Média | 
+|RF-006| A aplicação deve oferecer a opção de compartilhamento do endereço do portal para todos o usuários a fim de disseminar informação   | Baixa |
+|RF-007| A aplicação deve permitir o compartilhamento da aptidão de doação nas plataformas de mídias sociais | Baixa | 
 
 ### Requisitos não Funcionais
 
