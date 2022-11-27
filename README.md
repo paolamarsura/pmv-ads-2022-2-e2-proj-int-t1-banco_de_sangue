@@ -26,7 +26,7 @@ Faça o download do repositório para a sua máquina, abra ele com o Visual Stud
 
 Você pode acessar as credenciais de acesso ao nosso banco de dados no arquivo appsettings.json do repositório. Caso você tenha dúvidas o [Tutorial](https://www.youtube.com/watch?v=Lgh8JgcYFwM/) pode te ajudar.
 
-A aplicação esta disponível para acesso através deste link (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+A aplicação esta disponível para acesso através deste link (por exemplo: Google Cloud IAM.)
 
 Para testar as funcionalidades com o usuário admin você deve utilizar no login admin@admin.com senha: etapa 3 
 
