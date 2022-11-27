@@ -18,8 +18,16 @@ namespace BancoDeSangue.Repositorio
 
         public InstituicaoModel Adicionar(InstituicaoModel instituicao)
         {
+            instituicao.criacao = DateTime.Now;
             _bancoContext.Instituicoes.Add(instituicao);
             _bancoContext.SaveChanges();
+            return instituicao;
+        }
+
+        public InstituicaoModel InstituicaoPorNome(string nome)
+        {
+            nome = nome.Trim().ToLower();
+            InstituicaoModel instituicao = _bancoContext.Instituicoes.Where(x => x.nome.Trim().ToLower().Equals(nome)).FirstOrDefault();
             return instituicao;
         }
 

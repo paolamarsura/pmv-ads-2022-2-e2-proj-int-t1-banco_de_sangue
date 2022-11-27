@@ -10,6 +10,7 @@ namespace BancoDeSangue.Repositorio
     {
         List<InstituicaoModel> BuscarTodos();
         InstituicaoModel Adicionar(InstituicaoModel instituicaoModel);
+        InstituicaoModel InstituicaoPorNome(string nome);
     }
 }
 
