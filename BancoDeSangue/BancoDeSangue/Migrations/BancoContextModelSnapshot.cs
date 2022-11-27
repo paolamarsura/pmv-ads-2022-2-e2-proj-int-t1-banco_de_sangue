@@ -19,6 +19,81 @@ namespace BancoDeSangue.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("BancoDeSangue.Models.FormularioModel", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("acupuntura")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("amamentacao")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("cirurgia")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("covid")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("criacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("doacaoAnt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("extracaoDent")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("febreAmarela")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("gravidez")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("gripe")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("hepatite")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("herpes")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("hiv")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("idade")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("malariaChagas")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("parkinson")
+                        .HasColumnType("bit");
+
+                    b.Property<float>("peso")
+                        .HasColumnType("real");
+
+                    b.Property<bool>("relacaoRisco")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("sexo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("tattoo")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("vacina")
+                        .HasColumnType("bit");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Formulario");
+                });
+
             modelBuilder.Entity("BancoDeSangue.Models.InstituicaoModel", b =>
                 {
                     b.Property<int>("id")
