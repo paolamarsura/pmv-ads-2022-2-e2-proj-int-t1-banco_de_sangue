@@ -25,5 +25,12 @@ No caso de teste CT-04 a dificuldade estava em conseguir retornar o valor do for
 A tela abaixo mostra o retorno das variáveis após submissão do formulário.
 
  ![image](https://user-images.githubusercontent.com/103156976/198860499-da628b68-4c9f-4329-94a3-cded7831e606.png)
+ 
+ - CT-05-Cadastro como doador
+ No caso de teste CT-05 os vídeos abaixo mostram a integração do cadastro do usuário como doador e sua interação com o banco de dados bem como a programação das funcionalidades editar e apagar. 
+
+https://user-images.githubusercontent.com/103156976/204138563-07669494-d95a-45de-a16a-44e6b7a2040c.mp4
+
+https://user-images.githubusercontent.com/103156976/204138554-cf92dc2f-2906-4a01-9bdd-0f0ee94d1662.mp4
 
 
