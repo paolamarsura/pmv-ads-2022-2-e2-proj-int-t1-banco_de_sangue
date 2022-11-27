@@ -59,5 +59,15 @@ namespace BancoDeSangue.Models
         [Required]
         public int usuarioId { get; set; }
 
+        [NotMapped]
+        public string usuarioNome { get; set; }
+
+        [NotMapped]
+        public string usuarioEmail { get; set; }
+
+
+        [NotMapped]
+        public bool apto { get; set; }
+
     }
 }

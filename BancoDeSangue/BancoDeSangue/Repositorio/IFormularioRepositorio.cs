@@ -1,8 +1,5 @@
-﻿using BancoDeSangue.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using BancoDeSangue.Models;
 
 namespace BancoDeSangue.Repositorio
 {
@@ -10,6 +7,10 @@ namespace BancoDeSangue.Repositorio
     {
         FormularioModel Adicionar(FormularioModel formularioModel);
         FormularioModel Atualizar(FormularioModel formularioModel);
+        
         FormularioModel BuscarFormularioPorUsuario(UsuarioModel usuario);
+        FormularioModel BuscarFormulario(int id);
+
+        List<FormularioModel> BuscarTodos();
     }
 }

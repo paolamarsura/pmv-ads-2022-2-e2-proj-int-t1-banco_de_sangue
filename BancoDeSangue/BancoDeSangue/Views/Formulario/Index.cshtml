@@ -337,11 +337,13 @@
                                     </div>
 
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12 text-end">
-                                        <button type="submit" class="btn bg-gradient-primary btn-behance mt-3 mb-0" asp-controller="Formulario" asp-action="Criar" role="button">Enviar Formulário</button>
+                                @if (!ViewBag.viewMode) { 
+                                    <div class="row">
+                                        <div class="col-md-12 text-end">
+                                            <button type="submit" class="btn bg-gradient-primary btn-behance mt-3 mb-0" asp-controller="Formulario" asp-action="Criar" role="button">Enviar Formulário</button>
+                                        </div>
                                     </div>
-                                </div>
+                                }
                             </form>
                         </div>
                     </div>

@@ -1,4 +1,6 @@
-﻿using BancoDeSangue.Models;
+﻿using BancoDeSangue.Data;
+using BancoDeSangue.Models;
+using BancoDeSangue.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,9 +13,19 @@ namespace BancoDeSangue.Controllers
 {
     public class HomeController : Controller
     {
-         
+
+        private readonly BancoContext _context;
+
+        public HomeController(BancoContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
+            ViewBag.qtdUsuarios = _context.Usuarios.Count();
+            ViewBag.qtdInstituicoes = _context.Instituicoes.Count();
+
             return View();
         }
 

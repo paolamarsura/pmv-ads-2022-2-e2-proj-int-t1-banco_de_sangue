@@ -1,4 +1,5 @@
-﻿using BancoDeSangue.Models;
+﻿using System.Collections.Generic;
+using BancoDeSangue.Models;
 using BancoDeSangue.Repositorio;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,8 +25,58 @@ namespace BancoDeSangue.Controllers
                 return RedirectToAction("Index", "Login");
             }
 
+            ViewBag.viewMode = false;
+
             FormularioModel formulario = _formularioRepositorio.BuscarFormularioPorUsuario(usuarioLogado);
             return View(formulario);
+        }
+
+        [HttpGet]
+        public IActionResult Visualizar(int id)
+        {
+
+            UsuarioModel usuarioLogado = this.usuarioLogado("ADMIN");
+            if (usuarioLogado == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+            
+            ViewBag.viewMode = true;
+
+            FormularioModel formulario = _formularioRepositorio.BuscarFormulario(id);
+
+            if (formulario == null) {
+                return NotFound();
+            }
+
+            return View("Index", formulario);
+        }
+
+        public IActionResult Lista()
+        {
+            UsuarioModel usuarioLogado = this.usuarioLogado("ADMIN");
+            if (usuarioLogado == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+            
+            List<FormularioModel> formularios = _formularioRepositorio.BuscarTodos();
+
+            foreach (FormularioModel formulario in formularios) {
+                
+                UsuarioModel usuario = _usuarioRepositorio.BuscarUsuario(formulario.usuarioId);
+                if (usuario == null) {
+                    continue;
+                }
+
+                formulario.usuarioNome = usuario.nome;
+                formulario.usuarioEmail = usuario.email;
+
+                formulario.apto = this.estaApto(formulario);
+
+            }
+
+            return View(formularios);
         }
 
 
@@ -79,12 +130,19 @@ namespace BancoDeSangue.Controllers
                 formularioBD.sexo = formulario.sexo;
                 formularioBD.tattoo = formulario.tattoo;
                 
-                formularioBD.vacina = formulario.vacina;
+                formularioBD.vacina = formulario.vacina;                
 
                 _formularioRepositorio.Atualizar(formularioBD);                
             }
 
             return RedirectToAction("Index", "Formulario");
+        }
+
+        private bool estaApto(FormularioModel formulario) {
+            return !(formulario.acupuntura || formulario.amamentacao || formulario.cirurgia || 
+                formulario.covid || formulario.extracaoDent || formulario.febreAmarela || 
+                formulario.gravidez || formulario.gripe || formulario.hepatite || formulario.herpes ||
+                formulario.hiv || formulario.malariaChagas || formulario.parkinson || formulario.relacaoRisco || formulario.tattoo || formulario.vacina);
         }
 
     }

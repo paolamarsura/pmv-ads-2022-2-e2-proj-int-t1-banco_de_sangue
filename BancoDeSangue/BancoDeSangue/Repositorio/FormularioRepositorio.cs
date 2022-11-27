@@ -25,7 +25,8 @@ namespace BancoDeSangue.Repositorio
         }
 
         public FormularioModel Atualizar(FormularioModel formularioModel)
-        {            
+        {
+            formularioModel.criacao = DateTime.Now;
             _bancoContext.Formulario.Update(formularioModel);
             _bancoContext.SaveChanges();
             return formularioModel;
@@ -35,6 +36,17 @@ namespace BancoDeSangue.Repositorio
         {
             FormularioModel formulario = _bancoContext.Formulario.Where(x => x.usuarioId == usuario.id).FirstOrDefault();
             return formulario;
+        }
+
+        public FormularioModel BuscarFormulario(int id)
+        {
+            FormularioModel formulario = _bancoContext.Formulario.Where(x => x.id == id).FirstOrDefault();
+            return formulario;
+        }
+
+        public List<FormularioModel> BuscarTodos()
+        {
+            return _bancoContext.Formulario.OrderByDescending(x => x.usuarioId).ToList();
         }
     }
 }
