@@ -1,56 +1,129 @@
-﻿@model IEnumerable<BancoDeSangue.Models.InstituicaoModel>
+﻿@model ListaInstituicaoModel
 
-    @{
-        ViewData["Title"] = "ListaDeInstituicao";
+@{
+    ViewData["Title"] = "Lista de Instituições";
+}
+
+<section class="pt-3 pt-md-5 pb-md-5 pt-lg-8 bg-gray-200">
+    <div class="container">
+        <div class="row">
+            <!--MENU LATERAL-->
+            <div class="col-lg-3 mb-lg-0 mb-5 mt-8 mt-md-5 mt-lg-0">
+                <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-10 shadow-lg">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Login/ListaDeUsuarios">
+                            <i class="material-icons text-dark opacity-5 pe-2">widgets</i>
+                            Formulários
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Login/ListaDeUsuarios">
+                            <i class="material-icons text-dark opacity-5 pe-2">cookie</i>
+                            Usuários
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/Instituicao/ListaDeInstituicao">
+                            <i class="material-icons text-dark opacity-5 pe-2">description</i>
+                            Instituições
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="#hyperlinking">
+                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                            Perfil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" data-scroll="" href="/login">
+                            <i class="material-icons text-dark opacity-5 pe-2">insert_link</i>
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--LISTA -->
+            <div class="col-lg-9">
+                <div class="card shadow-lg mb-5">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                            <h3 class="text-white mb-0">Lista de Instituições</h3>
+                            <p class="text-white opacity-8 mb-0">Todos as instituições estão aqui!</p>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-5">
+                        @if (Model.sucesso != null)
+                        {
+                            <div class="alert alert-success text-black text-center text-bolder">@Model.sucesso</div>
+                        }
+                        <div class="row">
+                            <div class="col-12 text-end">
+                                <a class="btn bg-gradient-success btn-icon" href="/Instituicao/Cadastrar">
+                                    <div class="d-flex align-items-center">
+                                        <i class="material-icons ms-2" aria-hidden="true">add</i>
+                                        Adicionar
+                                    </div>
+                                </a>                                
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome e Telefone</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Endereço</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Data de Cadastro</th>
+                                        <th class="text-secondary opacity-7"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.instituicoes)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-xs">@Html.DisplayFor(modelItem => item.nome)</h6>
+                                                        <p class="text-xs text-secondary mb-0">@Html.DisplayFor(modelItem => item.telefone)</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold"><a href="@item.link" target="_blank">@Html.DisplayFor(modelItem => item.endereco)</a></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">@Html.DisplayFor(modelItem => item.criacao)</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <a class="text-secondary font-weight-bold text-xs" asp-controller="CadastroUsuario" asp-action="Editar" asp-route-id="@item.id">
+                                                    Editar
+                                                </a>
+
+                                                <span class="ml-2 mr-2">|</span>
+                                                <a href="#" class="text-secondary font-weight-bold text-xs" onclick="excluir(@item.id)">
+                                                    Apagar
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function excluir(id) {
+        var resultado = confirm("Deseja realmente excluir o usuário?");
+        if (resultado == true) {
+            window.location.replace("/Instituicao/Apagar/" + id);
+        }
     }
-
-    <h1>Lista de Instituição</h1>
-
-    <p>
-        <a asp-controller="Login" asp-action="ListaDeUsuarios" role="button">Voltar</a>
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.nome)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.cidade)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.endereco)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.telefone)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.cidade)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.endereco)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.telefone)
-                    </td>
-                    <td>
-                        <a asp-controller="Instituicao" asp-action="Editar" asp-route-id="@item.nome">Editar</a> |
-
-                        <a asp-controller="Instituicao" asp-action="Apagar" asp-route-id="@item.nome">Apagar</a>
-                    </td>
-
-                </tr>
-            }
-        </tbody>        
-
-    </table>
+</script>
