@@ -10,11 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BancoDeSangue.Migrations
 {
     [DbContext(typeof(BancoContext))]
-<<<<<<< HEAD:BancoDeSangue/BancoDeSangue/Migrations/20221127002027_Migration5.Designer.cs
-    [Migration("20221127002027_Migration5")]
-=======
-    [Migration("20221126185947_Migration5")]
->>>>>>> origin/main:BancoDeSangue/BancoDeSangue/Migrations/20221126185947_Migration5.Designer.cs
+    [Migration("20221127014458_Migration5")]
     partial class Migration5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
