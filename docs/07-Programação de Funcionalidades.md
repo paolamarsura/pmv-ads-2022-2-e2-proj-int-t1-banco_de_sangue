@@ -8,21 +8,23 @@ Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos 
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-002| Emitir um relatório de tarefas no mês   | relatorio.shtml |
+|RF-001| A aplicação deve ter cadastro de usuário com login e senha | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-002| A aplicação deve permitir o cadastro da pessoa física doadora | relatorio.shtml |
+|RF-003| A aplicação deve gerar um formulário com os requisitos básicos para triar o potencial doador | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-004| A aplicação deve oferecer ao usuário um listagem de bancos de sangue existentes no seu estado   | relatorio.shtml |
+|RF-005| A aplicação deve notificar por e-mail o usuário que esta inapto ou inapto temporariamente para doar sangue. | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+|RF-006| A aplicação deve oferecer a opção de compartilhamento do endereço do portal para todos o usuários a fim de disseminar informação   | relatorio.shtml |
+|RF-007| A aplicação deve permitir o compartilhamento da aptidão de doação nas plataformas de mídias sociais | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
+
 
 # Instruções de acesso
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+Faça o download do repositório para a sua máquina, abra ele com o Visual Studio Community 2019, você precisará também ter instalado o SQL Server Management Studio 2018. Para executar o banco de dados desta aplicação, instale o Docker e execute o comando executar.bat
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+Você pode acessar as credenciais de acesso ao nosso banco de dados no arquivo appsettings.json do repositório. Caso você tenha dúvidas o Tutorial pode te ajudar.
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+A aplicação esta disponível para acesso através deste link (por exemplo: Google Cloud IAM.)
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+Para testar as funcionalidades com o usuário admin você deve utilizar no login admin@admin.com senha: etapa 3
+
+
