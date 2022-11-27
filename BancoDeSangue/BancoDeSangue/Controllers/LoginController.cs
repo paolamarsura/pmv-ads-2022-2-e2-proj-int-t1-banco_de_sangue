@@ -64,8 +64,7 @@ namespace BancoDeSangue.Controllers
             var usuario = new UsuarioModel();
             return View(usuario);
         }
-
-        // GET: LoginS
+        
         public async Task<IActionResult> ListaDeUsuarios([FromQuery(Name = "sucesso")] string sucesso)
         {
             ListaUsuarioModel resultado = new ListaUsuarioModel();

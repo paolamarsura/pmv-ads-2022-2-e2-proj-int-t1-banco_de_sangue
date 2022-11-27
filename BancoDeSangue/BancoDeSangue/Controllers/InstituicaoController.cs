@@ -22,8 +22,7 @@ namespace BancoDeSangue.Controllers
        
         public IActionResult Cadastrar()
         {
-            return View();
-            
+            return View(new InstituicaoModel());            
         }
 
          public IActionResult Editar()
@@ -41,27 +40,67 @@ namespace BancoDeSangue.Controllers
             return View();
         }
 
-        public IActionResult ListaDeInstituicao()
+        public IActionResult ListaDeInstituicao([FromQuery(Name = "sucesso")] string sucesso)
         {
-            var teste = _instituicaoRepositorio.BuscarTodos();
-            return View("ListaDeInstituicao", teste);
+
+            ListaInstituicaoModel resposta = new ListaInstituicaoModel();
+            resposta.instituicoes = _instituicaoRepositorio.BuscarTodos();
+            resposta.sucesso = sucesso;
+
+            return View(resposta);
         }
 
-        public IActionResult InstituicoesEndereco()
+        [HttpGet]
+        public IActionResult InstituicoesEndereco([FromQuery(Name = "sucesso")] string sucesso)
         {
-            var teste = _instituicaoRepositorio.BuscarTodos();
-            return View("InstituicoesEndereco", teste);
+
+            ListaInstituicaoModel resposta = new ListaInstituicaoModel();
+            resposta.instituicoes = _instituicaoRepositorio.BuscarTodos();
+            resposta.sucesso = sucesso;
+
+            return View("InstituicoesEndereco", resposta);
         }
         
 
         [HttpPost]
         public IActionResult Cadastrar(InstituicaoModel instituicao)
         {
+            if (String.IsNullOrWhiteSpace(instituicao.nome))
+            {
+                instituicao.erro = "Preencha o nome!";
+                return View("Cadastrar", instituicao);
+            }
+
+            InstituicaoModel temNome = _instituicaoRepositorio.InstituicaoPorNome(instituicao.nome);
+            if (temNome != null) {
+                instituicao.erro = "Já existe esta intituição com nome de " + instituicao.nome + " !";
+                return View("Cadastrar", instituicao);
+            }
+
+            if (String.IsNullOrWhiteSpace(instituicao.telefone))
+            {
+                instituicao.erro = "Preencha o Telefone!";
+                return View("Cadastrar", instituicao);
+            }
+
+            if (String.IsNullOrWhiteSpace(instituicao.endereco))
+            {
+                instituicao.erro = "Preencha o Endereço!";
+                return View("Cadastrar", instituicao);
+            }
+
+            if (String.IsNullOrWhiteSpace(instituicao.link))
+            {
+                instituicao.erro = "Preencha o Link do Google!";
+                return View("Cadastrar", instituicao);
+            }
+
             _instituicaoRepositorio.Adicionar(instituicao);
-            return RedirectToAction("ListaDeInstituicao", "Instituicao");
 
+            string sucesso = "A instituição " + instituicao.nome + " foi salva com sucesso!";
+            return RedirectToAction("ListaDeInstituicao", "Instituicao", new { sucesso = sucesso });
+    
         }
-
      }
          
 }
