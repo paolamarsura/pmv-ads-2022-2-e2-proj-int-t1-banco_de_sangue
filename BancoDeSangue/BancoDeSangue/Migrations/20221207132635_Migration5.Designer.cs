@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BancoDeSangue.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20221127212004_Migration5")]
+    [Migration("20221207132635_Migration5")]
     partial class Migration5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

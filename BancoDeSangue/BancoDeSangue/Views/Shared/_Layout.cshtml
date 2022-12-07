@@ -1,7 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <script type="text/javascript">
+        function copyUrlBrowser() {
+            const button = document.getElementById("icone")
 
+            button.addEventListener('click', () => {
+                navigator.clipboard.writeText(document.URL);
+            })
+        }
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewData["Title"] - Projeto Doe Sangue</title>
@@ -20,6 +28,7 @@
 </head>
 
 <body class="index-page bg-gray-200">
+
     <!--NAVEGAÇÃO-->
     <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
@@ -68,6 +77,15 @@
                                         <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github">Github</p>
                                     </a>
                                 </li>
+
+                                <li class="nav-item dropdown dropdown-hover mx-2">                                    
+                                    <a id="icone" onclick="copyUrlBrowser()" class="nav-link ps-2 d-flex cursor-pointer align-items-center">
+                                        <i class="material-icons opacity-6 me-2 text-md">content_copy</i>
+                                        Compartilhar
+                                    </a>
+                                </li>
+
+                               
 
                                 <li class="nav-item my-auto ms-3 ms-lg-0">
                                     <a href="/login" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">DOE SANGUE AGORA!</a>
