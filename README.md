@@ -24,11 +24,17 @@ Esta aplicação tem como objetivo promover a conscientização sobre a doação
 
 Faça o download do repositório para a sua máquina, abra ele com o Visual Studio Community 2019, você precisará também ter instalado o SQL Server Management Studio 2018. Para executar o banco de dados desta aplicação, instale o [Docker](https://docs.docker.com/desktop/install/windows-install/) e execute o comando executar.bat
 
-Você pode acessar as credenciais de acesso ao nosso banco de dados no arquivo appsettings.json do repositório. Caso você tenha dúvidas o [Tutorial](https://www.youtube.com/watch?v=Lgh8JgcYFwM/) pode te ajudar.
+Para acessar o nosso banco de dados utilizar as credenciais abaixo, que também estão disponíveis no arquivo appsettings.json do repositório.
+
+localhost: 1450
+ID=sa;
+Password=BcoSague#2022
+
+Caso você tenha dúvidas o [Tutorial](https://www.youtube.com/watch?v=Lgh8JgcYFwM/) pode te ajudar.
 
 A aplicação esta disponível para acesso através deste link (por exemplo: Google Cloud IAM.)
 
-Para testar as funcionalidades com o usuário admin você deve utilizar no login admin@admin.com senha: etapa 3 
+Para testar as funcionalidades com o usuário admin você deve utilizar no login adm@adm.com senha: etapa2
 
 # Documentação
 
