@@ -19,6 +19,10 @@ https://user-images.githubusercontent.com/103156976/198860751-97a16f90-4585-45a7
 
 https://user-images.githubusercontent.com/103156976/198860728-227194e4-bdf7-4ceb-b26a-1da2f6dffac5.mp4
 
+- CT-03-Compartilhar Aplicação.
+- No caso de teste CT-03 foi incluído um botão para copiar o endereço da aplicação para que o usuário possa colar em suas redes sociais, como melhoria o grupo planeja trabalhar para que o link com as mídias sociais possa ser automático; 
+![teste3](https://user-images.githubusercontent.com/103156976/206910442-281b0224-0431-4e35-8c27-c06186c7e3c3.jpg)
+
 
 - CT-04-Formulário de Aptidão 
 No caso de teste CT-04 a dificuldade estava em conseguir retornar o valor do formulário para a model, tentamos a execução utilizando o @Html.Helper.BeginForm porém sem sucesso, desta forma a solução encontrada foi aplicar o “asp-for” em cada tag de radio para  fazer o biding da view para a model dentro da controller. 
