@@ -59,3 +59,8 @@ https://user-images.githubusercontent.com/103156976/204138455-dcf677be-7726-45c9
 |Você considera a aplicação relevante? | Sim: [x] Não: [ ] |
 |Qual a sua sugestão de melhoria? | Mostrar o meu histórico de formulário.  |
 
+Conclusão:
+
+Todos os usuários consideraram a aplicação relevante e não se estressaram em participar do teste independente da fase em que sua contribuição foi realizada e também todos os participantes recomendariam a aplicação para um amigo. Dos 7 participantes apenas um não teve sugestão de melhoria. 
+
+Por parte do grupo, acreditamos que aumentar o escopo do teste de usabilidade e também buscar uma forma de automatizar este teste por meio de formulários eletrônicos como por exemplo o google forms após a publicação da aplicação aumentaria o nosso alcance e nos daria uma visão mais fidedgina.
