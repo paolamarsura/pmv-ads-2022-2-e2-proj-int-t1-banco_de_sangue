@@ -54,9 +54,9 @@ Para testar as funcionalidades com o usuário admin você deve utilizar no login
 <li><a href="docs/13-Referências.md"> Referências</a></li>
 </ol>
 
-# Código
+# Publição online
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="http://34.121.235.198/"> Aplicação interativa - Banco de Sangue, para conhecer clique aqui! </a></li>
 
 # Apresentação
 
