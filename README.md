@@ -32,7 +32,7 @@ Password=BcoSague#2022
 
 Caso você tenha dúvidas o [Tutorial](https://www.youtube.com/watch?v=Lgh8JgcYFwM/) pode te ajudar.
 
-A aplicação esta disponível para acesso através deste link (por exemplo: Google Cloud IAM.)
+A aplicação esta disponível para acesso através deste link <li><a href="http://34.121.235.198/"> Aplicação interativa - Banco de Sangue! </a></li>
 
 Para testar as funcionalidades com o usuário admin você deve utilizar no login adm@adm.com senha: etapa2
 
