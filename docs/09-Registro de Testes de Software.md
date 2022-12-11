@@ -28,8 +28,7 @@ No caso de teste CT-03 foi incluído um botão para copiar o endereço da aplica
 
 |CT-04-Formulário de Aptidão |
 |--------------|
-No caso de teste CT-04 a dificuldade estava em conseguir retornar o valor do formulário para a model, tentamos a execução utilizando o @Html.Helper.BeginForm porém sem sucesso, desta forma a solução encontrada foi aplicar o “asp-for” em cada tag de radio para  fazer o biding da view para a model dentro da controller. 
-A tela abaixo mostra o retorno das variáveis após submissão do formulário.
+No caso de teste CT-04 a dificuldade estava em conseguir retornar o valor do formulário para a model, tentamos a execução utilizando o @Html.Helper.BeginForm porém sem sucesso, desta forma a solução encontrada foi aplicar o “asp-for” em cada tag de radio para  fazer o biding da view para a model dentro da controller. A tela abaixo mostra o retorno das variáveis após submissão do formulário.
 
  ![image](https://user-images.githubusercontent.com/103156976/198860499-da628b68-4c9f-4329-94a3-cded7831e606.png)
  
