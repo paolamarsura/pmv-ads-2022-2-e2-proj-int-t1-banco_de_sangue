@@ -4,77 +4,58 @@
 
 https://user-images.githubusercontent.com/103156976/198896052-36530b54-38e3-49df-8437-22b6c9f5cf50.mp4
 
-* Participante 1 - sexo masculino, 32 anos, potencial doador. 
 
-Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
+|Participante |  1  - sexo masculino, 32 anos, potencial doador.  |
+|---------|---------|
+| Como você se sentiu após completar a tarefa? | Satisfeito: [x] Estressado: [ ] |
+|Você recomendaria a aplicação a um amigo? | Sim: [x] Não: [ ] |
+|Você considera a aplicação relevante? | Sim: [x] Não: [ ] |
+|Qual a sua sugestão de melhoria? | O formulário não me deu retorno. |
 
-Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
+|Participante |  2 - sexo masculino, 25 anos, potencial doador.  |
+|---------|---------|
+| Como você se sentiu após completar a tarefa? | Satisfeito: [x] Estressado: [ ] |
+|Você recomendaria a aplicação a um amigo? | Sim: [x] Não: [ ] |
+|Você considera a aplicação relevante? | Sim: [x] Não: [ ] |
+|Qual a sua sugestão de melhoria? | A ideia é boa, porém ainda não é usual.  |
 
-Você considera a aplicação relevante? Sim: [x] Não: [ ]
-
-Qual a sua sugestão de melhoria? O formulário não me deu retorno. 
-
-* Participante 2 - sexo masculino, 25 anos, potencial doador. 
-
-Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
-
-Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
-
-Você considera a aplicação relevante? Sim: [x] Não: [ ]
-
-Qual a sua sugestão de melhoria? A ideia é boa, porém ainda não é usual. 
 
 - No dia 27/11/2022 foram executados novos testes de usabilidades, conforme apresentado com o vídeo abaixo: 
 
 https://user-images.githubusercontent.com/103156976/204138455-dcf677be-7726-45c9-b93c-f094cebbe3ec.mp4
 
+|Participante |  3 - sexo masculino, 18 anos, potencial doador.   |
+|---------|---------|
+| Como você se sentiu após completar a tarefa? | Satisfeito: [x] Estressado: [ ] |
+|Você recomendaria a aplicação a um amigo? | Sim: [x] Não: [ ] |
+|Você considera a aplicação relevante? | Sim: [x] Não: [ ] |
+|Qual a sua sugestão de melhoria? | Melhorar a responsividade.  |
 
-* Participante 3 - sexo masculino, 18 anos, potencial doador. 
+|Participante | 4 - sexo masculino, 55 anos, potencial doador.    |
+|---------|---------|
+| Como você se sentiu após completar a tarefa? | Satisfeito: [x] Estressado: [ ] |
+|Você recomendaria a aplicação a um amigo? | Sim: [x] Não: [ ] |
+|Você considera a aplicação relevante? | Sim: [x] Não: [ ] |
+|Qual a sua sugestão de melhoria? | Não tenho sugestão no momento.  |
 
-Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
+|Participante | 5 - sexo feminino, 55 anos, potencial doador.   |
+|---------|---------|
+| Como você se sentiu após completar a tarefa? | Satisfeito: [x] Estressado: [ ] |
+|Você recomendaria a aplicação a um amigo? | Sim: [x] Não: [ ] |
+|Você considera a aplicação relevante? | Sim: [x] Não: [ ] |
+|Qual a sua sugestão de melhoria? | Adicionar mais histórias a aplicação, é muito interessante.  |
 
-Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
+|Participante | 6 - sexo feminino, 23 anos, potencial doador.  |
+|---------|---------|
+| Como você se sentiu após completar a tarefa? | Satisfeito: [x] Estressado: [ ] |
+|Você recomendaria a aplicação a um amigo? | Sim: [x] Não: [ ] |
+|Você considera a aplicação relevante? | Sim: [x] Não: [ ] |
+|Qual a sua sugestão de melhoria? | Mostrar a instituição mais próxima o meu endereço por km.  |
 
-Você considera a aplicação relevante? Sim: [x] Não: [ ]
+|Participante | 7 - sexo feminino, 30 anos, potencial doador. |
+|---------|---------|
+| Como você se sentiu após completar a tarefa? | Satisfeito: [x] Estressado: [ ] |
+|Você recomendaria a aplicação a um amigo? | Sim: [x] Não: [ ] |
+|Você considera a aplicação relevante? | Sim: [x] Não: [ ] |
+|Qual a sua sugestão de melhoria? | Mostrar o meu histórico de formulário.  |
 
-Qual a sua sugestão de melhoria? Melhorar a responsividade.
-
-* Participante 4 - sexo masculino, 55 anos, potencial doador. 
-
-Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
-
-Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
-
-Você considera a aplicação relevante? Sim: [x] Não: [ ]
-
-Qual a sua sugestão de melhoria? Não tenho sugestão no momento.
-
-* Participante 5 - sexo feminino, 55 anos, potencial doador. 
-
-Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
-
-Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
-
-Você considera a aplicação relevante? Sim: [x] Não: [ ]
-
-Qual a sua sugestão de melhoria? Adicionar mais histórias a aplicação, é muito interessante.
-
-* Participante 6 - sexo feminino, 23 anos, potencial doador. 
-
-Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
-
-Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
-
-Você considera a aplicação relevante? Sim: [x] Não: [ ]
-
-Qual a sua sugestão de melhoria? Mostrar a instituição mais próxima o meu endereço por km.
-
-* Participante 7 - sexo feminino, 30 anos, potencial doador. 
-
-Como você se sentiu após completar a tarefa? Satisfeito: [x] Estressado: [ ]
-
-Você recomendaria a aplicação a um amigo? Sim: [x] Não: [ ]
-
-Você considera a aplicação relevante? Sim: [x] Não: [ ]
-
-Qual a sua sugestão de melhoria? Mostrar o meu histório de formulário.
