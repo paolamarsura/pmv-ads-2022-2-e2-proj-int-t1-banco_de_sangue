@@ -86,7 +86,7 @@ namespace BancoDeSangue.Controllers
             UsuarioModel usuarioLogado = this.usuarioLogado();
             if (usuarioLogado == null)
             {
-                return RedirectToAction("ListaDeInstituicao", "Instituicao");
+                return RedirectToAction("Index", "Login");
             }
 
             string id = HttpContext.Session.GetString("userId");

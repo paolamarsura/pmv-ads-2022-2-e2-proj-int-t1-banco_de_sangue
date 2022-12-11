@@ -1,42 +1,42 @@
 ﻿@model IEnumerable<BancoDeSangue.Models.InstituicaoModel>
 
-@{
-    ViewData["Title"] = "InstituicoesEndereco";
-}
-
-<h1>Lista de Instituição</h1>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.nome)
-            </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.endereco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.telefone)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.nome)
-                </td>                
-                <td>
-                    @Html.DisplayFor(modelItem => item.endereco)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.telefone)
-                </td>
-               
-            </tr>
+        @{
+            ViewData["Title"] = "InstituicoesEndereco";
         }
-    </tbody>
-</table>
+
+        <h1>Lista de Instituição</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.nome)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.endereco)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.telefone)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.endereco)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.telefone)
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
