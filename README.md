@@ -13,7 +13,6 @@ Esta aplicação tem como objetivo promover a conscientização sobre a doação
 * Jair Junio Da Silva
 * Luiz Eduardo Tavares Costa
 * Paola Marsura Verreschi de Oliveira
-* Paula Lavínia Alves Perret
 * Ríder Rocha Cantuária
 
 ## Orientador
