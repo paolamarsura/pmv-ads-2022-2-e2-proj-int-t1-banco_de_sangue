@@ -1,0 +1,25 @@
+message: Please cite this software using these metadata.
+title: BANCO DE SANGUE - APLICAÇÃO INTERATIVA
+authors:
+  - family-names: Benedetti Cavalcante
+    given-names:  Barbara
+  - family-names: Felipe Gomes Pinto
+    given-names: Andre
+  - family-names: Junio Da Silva
+    given-names: Jair
+  - family-names: Marsura Verreschi de Oliveira
+    given-names: Paola
+  - family-names: Eduardo Tavares Costa
+    given-names: Luiz
+  - family-names: Rocha Cantuária
+    given-names: Ríder
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Ribeiro Da Mota
+    given-names: Rosilane
+keywords:
+  - Banco Sangue
+  - Doação
+repository-code: https://github.com/paolamarsura/pmv-ads-2022-2-e2-proj-int-t1-banco_de_sangue
+version: 1.0.0
+date-released: 2022-12-11
